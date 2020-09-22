@@ -1,5 +1,5 @@
 <template>
-  <Layout>
+  <div>
 
     <!-- Banner -->
     <Banner />
@@ -13,7 +13,7 @@
     <!-- Footer -->
     <Footer />
 
-  </Layout>
+  </div>
 </template>
 
 <script>
@@ -23,6 +23,7 @@
   import Footer from '~/components/Footer';
 
   export default {
+  layout:"default",
     components: {
       Banner,
       Services,
