@@ -1,8 +1,12 @@
 <template>
     <div class="contact-card">
-        <p>{{ cardText }}
+    <h2 class="text-black">{{ josaPlatform.title }}</h2>
+     <p class=" text-gray-600 text-xs">{{ josaPlatform.description }}</p>
+
+    <!--    <p>{{ cardText }}
             <font-awesome-icon @click="tooltipShow" class="info-icon" :icon="['fas', 'info-circle']" />
         </p>
+-->
         <button ref="chatbutton" class="open-zammad-chat button tooltip button-disabled" disabled>
             <font-awesome-icon class="fa-icon" :icon="iconClasses" />
             {{ arabicName }}
@@ -16,7 +20,12 @@
         data() {
             return {
                 tooltip: 'المحادثة الفورية غير متاحة في الوقت الحالي. الرجاء تعبئة نموذج مكتب المساعدة.',
-                chatState: false
+                chatState: false,
+                josaPlatform: {
+                    title: 'مساعدة منتظمة',
+                    description: 'عندما تتواصل معنا عبر منصاتنا الخاصة سيبقى اسمك مجهولًا إلا إذا تم تزويدنا به. ولكن يمكن معرفة هوية المرسل عبر البريد الإلكتروني عن طريق البريد نفسه. بالإضافة إلى ذلك، يوفّر بريدنا الخاص خاصية التشفير'
+                },
+
             }
         },
         props: {

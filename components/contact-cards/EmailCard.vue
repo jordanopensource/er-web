@@ -1,13 +1,17 @@
 <template>
     <div class="contact-card">
+    <h2 class="text-black">{{ josaPlatform.title }}</h2>
+     <p class=" text-gray-600 text-xs">{{ josaPlatform.description }}</p>
+
         <p>
-            {{ cardText }}
+    <!--        {{ cardText }}
             <span class="tooltip">
                 <font-awesome-icon @click="copyEmail" class="copy-icon" :icon="['fas', 'copy']" />
                 <div ref="copyTooltip" class="copy-tooltip-text invisible"></div>
             </span>
+            -->
         </p>
-        <button ref="supportform" class="button tooltip">
+        <button ref="supportform" class="button tooltip w-2/4">
             <a :href="emailLink">
                 <font-awesome-icon class="fa-icon" :icon="iconClasses" />
                 {{ arabicName }}
@@ -23,7 +27,11 @@
     export default {
         data() {
             return {
-                emailLink: "mailto:" + this.email
+                emailLink: "mailto:" + this.email,
+                josaPlatform: {
+                    title: 'استشارات عامة',
+                    description: 'عندما تتواصل معنا عبر منصاتنا الخاصة سيبقى اسمك مجهولًا إلا إذا تم تزويدنا به. ولكن يمكن معرفة هوية المرسل عبر البريد الإلكتروني عن طريق البريد نفسه. بالإضافة إلى ذلك، يوفّر بريدنا الخاص خاصية التشفير'
+                },
             }
         },
         props: {
