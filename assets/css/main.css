@@ -112,7 +112,6 @@ p {
     margin: 10px 0;
     padding: 16px 20px;
     border-radius: 0.375rem;
-    display: flex;
     justify-content: space-between;
     flex-direction: column;
 }
@@ -203,7 +202,7 @@ p {
 /* sm */
 @screen sm {
     .contact-card {
-        flex-direction: row;
+        flex-direction: column;
     }
 
     .contact-card button,
