@@ -1,67 +1,58 @@
 <template>
-    <div id="get-help" class="container text-center py-24">
-        <h5 class="blue-line">{{ mainTitle }}</h5>
+    <div id="get-help" class=" text-center py-24 bg-josa-blue-veryDark w-full">
 
-        <div id="josa-platforms" class="mb-32 mt-2">
-            <h2>{{ josaPlatform.title }}</h2>
-            <p class="mb-16 mx-auto sm:px-32 md:px-40 lg:px-56 xl:px-64">{{ josaPlatform.description }}</p>
-            <PhoneCard :name="phoneCard.name" :arabicName="phoneCard.arabicName"
-                :iconName="phoneCard.iconName" :phone="phoneCard.phone" v-once />
-            <FormCard :name="formCard.name" :arabicName="formCard.arabicName"
-                :iconName="formCard.iconName" v-once />
-            <EmailCard :name="emailCard.name" :arabicName="emailCard.arabicName"
-                :iconName="emailCard.iconName" :email="emailCard.email" v-once />
+        <div id="josa-platforms" class=" container ">
+<!--        <h2>{{ josaPlatform.title }}</h2>
+            <p class="mb-6 mx-auto sm:px-32 md:px-40 lg:px-56 xl:px-64 text-gray-600 text-xs">{{ josaPlatform.description }}</p>
+-->
+            <div class="w-auto inline-block">
+            <div class="grid grid-cols-3 gap-4 justify-items-stretch h-auto">
             <ChatCard :name="chatCard.name" :arabicName="chatCard.arabicName"
-                :iconName="chatCard.iconName" v-once />
+                :iconName="chatCard.iconName" v-once class=" text-center bg-white  inline-block flex justify-center items-center mr-0"/>
+            <PhoneCard :name="phoneCard.name" :arabicName="phoneCard.arabicName"
+                :iconName="phoneCard.iconName" :phone="phoneCard.phone" v-once class=" text-center bg-white flex justify-center items-center mx-0" />
+            <EmailCard :name="emailCard.name" :arabicName="emailCard.arabicName"
+                :iconName="emailCard.iconName" :email="emailCard.email" v-once class=" text-center bg-white inline-block flex justify-center items-center mb-0" />
+                  </div>
+            </div>
+
+
         </div>
 
-        <div id="josa-socialmedia">
-            <h2>{{ socialMedia.title }}</h2>
-            <p class="mb-16 mx-auto sm:px-32 md:px-40 lg:px-56 xl:px-64">{{ socialMedia.description }}</p>
-            <SocialMediaCard v-for="card in socialMediaCards" :key="card.name" :name="card.name"
-                :arabicName="card.arabicName" :link="card.link" :anonymous="card.anonymous"
-                :encryption="card.encryption" :iconName="card.iconName" :color="card.color" />
-        </div>
+
+        <p class="font-light text-gray-500 text-xs leading-7 md:leading-9 mx-auto sm:px-32 md:px-40 lg:px-56 xl:px-64 ">{{ note1 }}</p>
+        <p class="font-light text-gray-500 text-xs leading-7 md:leading-9 mx-auto sm:px-32 md:px-40 lg:px-56 xl:px-64">{{ note2 }}</p>
 
     </div>
 </template>
 
 <script>
-    import SocialMediaCard from '~/components/contact-cards/SocialMediaCard';
     import ChatCard from '~/components/contact-cards/ChatCard';
-    import FormCard from '~/components/contact-cards/FormCard';
     import EmailCard from '~/components/contact-cards/EmailCard';
     import PhoneCard from '~/components/contact-cards/PhoneCard';
 
     export default {
         components: {
-            SocialMediaCard,
             ChatCard,
-            FormCard,
             EmailCard,
             PhoneCard
         },
         data() {
             return {
+                note1: 'اذا كنت مترددا يرجي مكالمتنا*',
+                note2: 'اذا كنت مترددا يرجي مكالمتنا**',
                 mainTitle: 'احصل على مساعدة الآن',
                 josaPlatform: {
                     title: 'عبر منصات خاصة',
                     description: 'عندما تتواصل معنا عبر منصاتنا الخاصة سيبقى اسمك مجهولًا إلا إذا تم تزويدنا به. ولكن يمكن معرفة هوية المرسل عبر البريد الإلكتروني عن طريق البريد نفسه. بالإضافة إلى ذلك، يوفّر بريدنا الخاص خاصية التشفير'
                 },
-                socialMedia: {
-                    title: 'عبر التواصل الإجتماعي',
-                    description: 'عند التواصل معنا عبر منصات التواصل الاجتماعي، يمكن معرفة هوية المرسل عن طريق اسم الصفحة المرسل منها، ولا نضمن وجود خاصية تشفير المحتوى من كلا الطرفين'
-                },
+
                 chatCard: {
                     name: "chat",
                     arabicName: "المحادثة الفورية",
                     iconName: "comment-dots"
                 },
-                formCard: {
-                    name: "helpdesk",
-                    arabicName: "مكتب المساعدة",
-                    iconName: "laptop",
-                },
+
                 emailCard: {
                     name: "email",
                     arabicName: "البريد الالكتروني",
@@ -74,34 +65,6 @@
                     iconName: "phone-alt",
                     phone: "07 7070 0099"
                 },
-                socialMediaCards: [{
-                        name: "twitter",
-                        arabicName: "تويتر",
-                        link: "https://twitter.com/jo_osa",
-                        anonymous: false,
-                        encryption: true,
-                        iconName: "twitter",
-                        color: '#08a0e9'
-                    },
-                    {
-                        name: "messenger",
-                        arabicName: "مسنجر",
-                        link: "https://www.messenger.com/t/jordanopensource",
-                        anonymous: false,
-                        encryption: true,
-                        iconName: "facebook-messenger",
-                        color: '#0078ff'
-                    },
-                    {
-                        name: "instagram",
-                        arabicName: "انستجرام",
-                        link: "https://www.instagram.com/jordanopensource/",
-                        anonymous: false,
-                        encryption: false,
-                        iconName: "instagram",
-                        color: '#3f729b'
-                    }
-                ],
             }
         }
     }
