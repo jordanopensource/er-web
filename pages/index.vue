@@ -1,14 +1,15 @@
 <template>
   <div>
 
+
     <!-- Banner -->
     <Banner />
 
-    <!-- Services -->
-    <Services />
-
     <!-- Get Help -->
     <GetHelp />
+
+    <!-- Services -->
+    <Services />
 
     <!-- Footer -->
     <Footer />
