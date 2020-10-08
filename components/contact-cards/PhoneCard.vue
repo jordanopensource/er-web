@@ -1,7 +1,8 @@
 <template>
-    <div class="contact-card">
-
-        <h2 class="text-black">{{ josaPlatform.title }}</h2>
+    <div class="contact-card phone m-0">
+    <div class="bg-red-700 colorabove"></div>
+    <div class="below">
+        <h2 class="text-black title">{{ josaPlatform.title }}</h2>
          <p class=" text-gray-600 text-xs">{{ josaPlatform.description }}</p>
 <!--
             {{ cardText }}
@@ -10,13 +11,14 @@
                 <div ref="copyTooltip" class="copy-tooltip-text invisible"></div>
             </span>
 -->
-        
+
         <button class="button tooltip block" @click="copy">
             <font-awesome-icon class="fa-icon" :icon="iconClasses" />
             <bdo dir="ltr">
             {{ phone }}
             </bdo>
         </button>
+    </div>
     </div>
 </template>
 
@@ -81,7 +83,7 @@
 
 <style scoped>
     p {
-        @apply font-theMixArab self-center mb-4;
+        @apply font-theMixArab self-center;
     }
 
     .button {
@@ -89,16 +91,9 @@
     }
 
     .copy-tooltip-text {
-
-
         direction: ltr;
         font-family: 'lato';
     }
 
 
-
-
-    @screen lg {
-
-    }
 </style>

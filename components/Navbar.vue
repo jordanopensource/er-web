@@ -33,7 +33,7 @@
         </span>
       </button>
     </div>
-
+<!--
     <div class="text-sm w-full sm:w-auto text-right sm:text-left flex-grow mt-4 sm:m-0 menu-content sm:max-h-full"
       :class="isOpen ? 'max-h-16' : 'max-h-0'">
       <a href="#response" class="nav-link">
@@ -44,6 +44,7 @@
       </a>
       <a href="#get-help" class="nav-link pl-0">احصل على مساعدة</a>
     </div>
+    -->
   </div>
 </template>
 

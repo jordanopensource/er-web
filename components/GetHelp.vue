@@ -1,18 +1,18 @@
 <template>
-    <div id="get-help" class=" text-center py-24 bg-josa-blue-veryDark w-full">
+    <div id="get-help" class=" text-center py-24 bg-josa-blue-veryDark w-full mt-0">
 
-        <div id="josa-platforms" class=" container ">
+        <div id="josa-platforms" class=" container mt-0">
 <!--        <h2>{{ josaPlatform.title }}</h2>
             <p class="mb-6 mx-auto sm:px-32 md:px-40 lg:px-56 xl:px-64 text-gray-600 text-xs">{{ josaPlatform.description }}</p>
 -->
-            <div class="w-auto inline-block">
-            <div class="grid grid-cols-3 gap-4 justify-items-stretch h-auto">
+            <div class="w-auto inline-block mt-0">
+            <div class="grid grid-cols-3 gap-4 justify-items-stretch h-auto mt-0">
             <ChatCard :name="chatCard.name" :arabicName="chatCard.arabicName"
-                :iconName="chatCard.iconName" v-once class=" text-center bg-white  inline-block flex justify-center items-center mr-0"/>
+                :iconName="chatCard.iconName" v-once class=" text-center bg-white  inline-block flex justify-center items-center m-0"/>
             <PhoneCard :name="phoneCard.name" :arabicName="phoneCard.arabicName"
-                :iconName="phoneCard.iconName" :phone="phoneCard.phone" v-once class=" text-center bg-white flex justify-center items-center mx-0" />
+                :iconName="phoneCard.iconName" :phone="phoneCard.phone" v-once class=" text-center bg-white flex justify-center items-center m-0" />
             <EmailCard :name="emailCard.name" :arabicName="emailCard.arabicName"
-                :iconName="emailCard.iconName" :email="emailCard.email" v-once class=" text-center bg-white inline-block flex justify-center items-center mb-0" />
+                :iconName="emailCard.iconName" :email="emailCard.email" v-once class=" text-center bg-white inline-block flex justify-center items-center m-0" />
                   </div>
             </div>
 

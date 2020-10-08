@@ -1,17 +1,21 @@
 <template>
-    <div class="contact-card">
-    <h2 class="text-black">{{ josaPlatform.title }}</h2>
+
+    <div class="contact-card chat m-0">
+        <div class="colorabove bg-yellow-400"></div>
+    <div class="below">
+    <h2 class="text-black title">{{ josaPlatform.title }}</h2>
      <p class=" text-gray-600 text-xs">{{ josaPlatform.description }}</p>
 
     <!--    <p>{{ cardText }}
             <font-awesome-icon @click="tooltipShow" class="info-icon" :icon="['fas', 'info-circle']" />
         </p>
 -->
-        <button ref="chatbutton" class="open-zammad-chat button tooltip button-disabled" disabled>
+        <button ref="chatbutton" class="open-zammad-chat button tooltip button-disabled bg-yellow-400" disabled>
             <font-awesome-icon class="fa-icon" :icon="iconClasses" />
             {{ arabicName }}
             <div ref="info" class="tooltip-text invisible">{{ tooltip }}</div>
         </button>
+    </div>
     </div>
 </template>
 
@@ -127,9 +131,6 @@
         @apply font-theMixArab self-center mb-4;
     }
 
-    .button {
-        @apply bg-josa-green;
-    }
 
     a:hover {
         color: rgba(255, 255, 255, 0.7)

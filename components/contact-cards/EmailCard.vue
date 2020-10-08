@@ -1,6 +1,8 @@
 <template>
-    <div class="contact-card">
-    <h2 class="text-black">{{ josaPlatform.title }}</h2>
+    <div class="contact-card email m-0">
+        <div class="bg-green-500 colorabove"></div>
+      <div class="below">
+    <h2 class="text-black title">{{ josaPlatform.title }}</h2>
      <p class=" text-gray-600 text-xs">{{ josaPlatform.description }}</p>
 
         <p>
@@ -11,7 +13,7 @@
             </span>
             -->
         </p>
-        <button ref="supportform" class="button tooltip w-2/4">
+        <button ref="supportform" class="button tooltip w-2/4 bg-green-500">
             <a :href="emailLink">
                 <font-awesome-icon class="fa-icon" :icon="iconClasses" />
                 {{ arabicName }}
@@ -20,6 +22,7 @@
                 <span>{{ email }}</span>
             </div>
         </button>
+    </div>
     </div>
 </template>
 
@@ -82,12 +85,10 @@
 
 <style scoped>
     p {
-        @apply font-theMixArab self-center mb-4;
+        @apply font-theMixArab self-center;
     }
 
-    .button {
-        @apply bg-josa-green;
-    }
+
 
     .copy-tooltip-text {
         @apply p-2 absolute z-10 bg-josa-black text-white text-left text-xs leading-4 rounded-md opacity-75;
