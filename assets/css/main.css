@@ -316,8 +316,8 @@ padding-bottom:10px;
       font-size: 26px;
     }
 }
-.div, .container{
-  @apply m-0;
+.container{
+  @apply m-auto;
 
 }
 .phone{
