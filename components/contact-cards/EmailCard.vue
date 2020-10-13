@@ -3,7 +3,8 @@
         <div class="bg-green-500 colorabove"></div>
       <div class="below">
     <h2 class="text-black title">{{ josaPlatform.title }}</h2>
-     <p class=" text-gray-600 text-xs">{{ josaPlatform.description }}</p>
+     <p class=" text-gray-600 text-xs" v-for="d in josaPlatform.description" :name="d">{{d}} </p>
+
 
         <p>
     <!--        {{ cardText }}
@@ -33,7 +34,12 @@
                 emailLink: "mailto:" + this.email,
                 josaPlatform: {
                     title: 'استشارات عامة',
-                    description: 'عندما تتواصل معنا عبر منصاتنا الخاصة سيبقى اسمك مجهولًا إلا إذا تم تزويدنا به. ولكن يمكن معرفة هوية المرسل عبر البريد الإلكتروني عن طريق البريد نفسه. بالإضافة إلى ذلك، يوفّر بريدنا الخاص خاصية التشفير'
+                    description: ['حماية من البرامج الخبيثة',
+                    'الاتصالات الآمنة',
+                    'تخزين البيانات ومسحها بالطرق الآمنة',
+                    'أمان مواقع التواصل الاجتماعي',
+                    'مشاكل التعطيل المقصود للإنترنت',
+                    'لحماية المواقع من الهجمات'],
                 },
             }
         },

@@ -4,7 +4,7 @@
         <div class="colorabove bg-yellow-400"></div>
     <div class="below">
     <h2 class="text-black title">{{ josaPlatform.title }}</h2>
-     <p class=" text-gray-600 text-xs">{{ josaPlatform.description }}</p>
+     <p class=" text-gray-600 text-xs" v-for="d in josaPlatform.description" :name="d">{{d}} </p>
 
     <!--    <p>{{ cardText }}
             <font-awesome-icon @click="tooltipShow" class="info-icon" :icon="['fas', 'info-circle']" />
@@ -27,7 +27,12 @@
                 chatState: false,
                 josaPlatform: {
                     title: 'مساعدة منتظمة',
-                    description: 'عندما تتواصل معنا عبر منصاتنا الخاصة سيبقى اسمك مجهولًا إلا إذا تم تزويدنا به. ولكن يمكن معرفة هوية المرسل عبر البريد الإلكتروني عن طريق البريد نفسه. بالإضافة إلى ذلك، يوفّر بريدنا الخاص خاصية التشفير'
+                    description: ['الإبلاغ عن حسابات مزيفة',
+                    'الثغرات والبرامج الخبيثة',
+                    'إخفاء الهوية والحجب',
+                    'الخصوصية عبر الإنترنت',
+                    'الأمن على مواقع التواصل الاجتماعي',
+                    'سلامة الأجهزة الإلكتروني'],
                 },
 
             }

@@ -3,7 +3,8 @@
     <div class="bg-red-700 colorabove"></div>
     <div class="below">
         <h2 class="text-black title">{{ josaPlatform.title }}</h2>
-         <p class=" text-gray-600 text-xs">{{ josaPlatform.description }}</p>
+         <p class=" text-gray-600 text-xs" v-for="d in josaPlatform.description" :name="d">{{d}} </p>
+
 <!--
             {{ cardText }}
             <span class="tooltip">
@@ -73,8 +74,12 @@
           return {
                 josaPlatform: {
                 title: 'حالات الطوارئ',
-                description: 'عندما تتواصل معنا عبر منصاتنا الخاصة سيبقى اسمك مجهولًا إلا إذا تم تزويدنا به. ولكن يمكن معرفة هوية المرسل عبر البريد الإلكتروني عن طريق البريد نفسه. بالإضافة إلى ذلك، يوفّر بريدنا الخاص خاصية التشفير'
-                },
+                description: ['الابتزاز',
+                'التصيد',
+                'اختراق الحسابات واسترجاعها',
+                'انتحال  للشخصيةي',
+                'حل الهجمات الرقمية DDOS',
+                'فيديوهات مفبركة']   },
           }
         },
 
