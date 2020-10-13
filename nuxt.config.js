@@ -1,3 +1,4 @@
+const webpack = require('webpack')
 
 export default {
   /*
@@ -90,7 +91,18 @@ export default {
   ** Build configuration
   ** See https://nuxtjs.org/api/configuration-build/
   */
+
+  // other configs
   build: {
-  }
+    plugins: [
+      new webpack.ProvidePlugin({
+        $: 'jquery',
+        jQuery: 'jquery',
+        'window.jQuery': 'jquery'
+      })
+    ]
+  },
+  // other configs
+
 
 }
