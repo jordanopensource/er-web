@@ -14,7 +14,7 @@ module.exports = {
                 'josa-green': '#5cb19c',
                 'josa-black': '#2e3436',
                 'josa-grey': {
-                    default: 'rgba(223, 220, 217, 0.1)',
+                    default: '#f7f6f5',
                     '500': '#aea79f'
                 }
             },
