@@ -112,6 +112,12 @@ p {
     justify-content: space-between;
     flex-direction: column;
 }
+.trust-cards{
+  flex-direction: column;
+  margin-top:20px;
+  justify-content: space-between;
+
+}
 .title{
   @apply text-4xl m-0
 }
@@ -230,9 +236,7 @@ padding-bottom:10px;
   .button {
       @apply text-xs;
   }
-    .contact-card {
-        flex-direction: column;
-    }
+
     .below,
     .contact-card button,
     .contact-card a.button {
@@ -316,10 +320,7 @@ padding-bottom:10px;
       font-size: 26px;
     }
 }
-.container{
-  @apply m-auto;
 
-}
 .phone{
 @apply m-0;
 
