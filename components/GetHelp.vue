@@ -5,7 +5,7 @@
 <!--        <h2>{{ josaPlatform.title }}</h2>
             <p class="mb-6 mx-auto sm:px-32 md:px-40 lg:px-56 xl:px-64 text-gray-600 text-xs">{{ josaPlatform.description }}</p>
 -->
-            <div class="w-auto inline-block mt-0">
+            <div class="w-full inline-block mt-10">
             <div class="grid grid-cols-3 gap-4 justify-items-stretch h-auto mt-0">
             <ChatCard :name="chatCard.name" :arabicName="chatCard.arabicName"
                 :iconName="chatCard.iconName" v-once class=" text-center bg-white  inline-block flex justify-center items-center m-0"/>
