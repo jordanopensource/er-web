@@ -1,4 +1,5 @@
 <template>
+<div class="bg-josa-blue-veryDark">
   <div class="flex items-center justify-between flex-wrap bg-josa-blue-veryDark py-10 container">
 
     <div class="flex items-center flex-shrink-0 text-white">
@@ -52,7 +53,7 @@
            </div>
        </div>
   </div>
-
+</div>
 </template>
 
 <script>
