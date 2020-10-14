@@ -23,11 +23,6 @@
 
             }
         },
-
-        computed: {
-            iconClasses() {
-                return ['fas', this.iconName]
-            }
-        },
+      
     }
 </script>
