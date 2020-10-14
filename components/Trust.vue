@@ -1,5 +1,6 @@
 <template>
   <div class="bg-white p-10">
+  <div class="container my-10">
     <h1>{{ title }}</h1>
 
     <div class="w-auto inline-block mt-0">
@@ -20,7 +21,7 @@
      </div>
   </div>
 
-
+</div>
     </div>
 </template>
 
