@@ -8,8 +8,11 @@
     <!-- Get Help -->
     <GetHelp />
 
-    <!-- Services -->
-    <Services />
+    <!-- Team -->
+    <Team />
+
+    <!-- Trust -->
+    <Trust />
 
     <!-- Footer -->
     <Footer />
@@ -19,17 +22,19 @@
 
 <script>
   import Banner from '~/components/Banner';
-  import Services from '~/components/Services';
+  import Team from '~/components/Team';
   import GetHelp from '~/components/GetHelp';
   import Footer from '~/components/Footer';
+  import Trust from '~/components/Trust'
 
   export default {
   layout:"default",
     components: {
       Banner,
-      Services,
+      Team,
       GetHelp,
-      Footer
+      Footer,
+      Trust
     }
   }
 </script>
