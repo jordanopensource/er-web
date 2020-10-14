@@ -2,7 +2,7 @@
   <div class="flex items-center justify-between flex-wrap bg-josa-blue-veryDark py-10 container">
 
     <div class="flex items-center flex-shrink-0 text-white">
-      <a href="/">
+      <a href="https://www.jordanopensource.org" target="_blank">
         <svg width="160px" height="48px" viewBox="0 0 160 48" version="1.1" xmlns="http://www.w3.org/2000/svg"
           xmlns:xlink="http://www.w3.org/1999/xlink">
           <!-- Generator: Sketch 58 (84663) - https://sketch.com -->
@@ -33,18 +33,7 @@
         </span>
       </button>
     </div>
-<!--
-    <div class="text-sm w-full sm:w-auto text-right sm:text-left flex-grow mt-4 sm:m-0 menu-content sm:max-h-full"
-      :class="isOpen ? 'max-h-16' : 'max-h-0'">
-      <a href="#response" class="nav-link">
-        طريقة التعامل
-      </a>
-      <a href="#service" class="nav-link">
-        خدماتنا
-      </a>
-      <a href="#get-help" class="nav-link pl-0">احصل على مساعدة</a>
-    </div>
-    -->
+
   </div>
 </template>
 
