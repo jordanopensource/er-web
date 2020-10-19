@@ -1,0 +1,333 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'TheMixArab';
+    font-weight: normal;
+    font-weight: 300;
+    src: url('../fonts/TheMixArab/TheMixArab.ttf') format("ttf"),
+        url('../fonts/TheMixArab/TheMixArab.eot') format("eot"),
+        url('../fonts/TheMixArab/TheMixArab.woff') format("woff"),
+        url('../fonts/TheMixArab/TheMixArab.woff2') format("woff2");
+}
+
+@font-face {
+    font-family: 'TheMixArabBold';
+    font-weight: normal;
+    font-weight: 300;
+    src: url('../fonts/TheMixArab/TheMixArab-Bold.ttf') format("ttf"),
+        url('../fonts/TheMixArab/TheMixArab-Bold.eot') format("eot"),
+        url('../fonts/TheMixArab/TheMixArab-Bold.woff') format("woff"),
+        url('../fonts/TheMixArab/TheMixArab-Bold.woff2') format("woff2");
+}
+
+@font-face {
+    font-family: 'FrutigerLTArabic-45Light';
+    font-weight: normal;
+    font-weight: 300;
+    src: url('../fonts/FrutigerLTArabic/FrutigerLTArabic-45Light.ttf') format("ttf"),
+        url('../fonts/FrutigerLTArabic/FrutigerLTArabic-45Light.eot') format("eot"),
+        url('../fonts/FrutigerLTArabic/FrutigerLTArabic-45Light.woff') format("woff");
+}
+
+@font-face {
+    font-family: 'FrutigerLTArabic-65Bold';
+    font-weight: normal;
+    font-weight: 300;
+    src: url('../fonts/FrutigerLTArabic/FrutigerLTArabic-65Bold.ttf') format("ttf"),
+        url('../fonts/FrutigerLTArabic/FrutigerLTArabic-65Bold.eot') format("eot"),
+        url('../fonts/FrutigerLTArabic/FrutigerLTArabic-65Bold.woff') format("woff");
+}
+
+@font-face {
+    font-family: 'FrutigerLTArabic-55Roman';
+    font-weight: normal;
+    font-weight: 300;
+    src: url('../fonts/FrutigerLTArabic/FrutigerLTArabic-55Roman.ttf') format("ttf"),
+        url('../fonts/FrutigerLTArabic/FrutigerLTArabic-55Roman.eot') format("eot"),
+        url('../fonts/FrutigerLTArabic/FrutigerLTArabic-55Roman.woff') format("woff");
+}
+
+h1 {
+    @apply text-3xl leading-11 font-theMixArabBold font-black mb-3;
+}
+
+h2 {
+    @apply text-3xl leading-11 text-josa-blue-oxfordBlue font-theMixArab font-black mb-5 mt-3;
+}
+
+h3 {
+    @apply text-175 leading-10 text-josa-blue-oxfordBlue font-theMixArab font-bold;
+}
+
+h4 {
+    @apply text-xl mr-5 font-frutigerLTArabicBold leading-9;
+}
+
+h5 {
+    @apply text-lg text-josa-blue font-bold font-theMixArab;
+}
+
+p {
+    @apply leading-8 text-xl text-josa-blue-veryDark font-frutigerLTArabicLight;
+}
+
+.button {
+    @apply inline-block text-white text-base font-bold rounded-md border-2 border-solid border-white px-3 py-3 my-10 font-frutigerLTArabicRoman break-words leading-8;
+}
+
+.button:hover {
+    color: rgba(255, 255, 255, 0.7)
+}
+
+.button-dark {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.button-light {
+    @apply bg-josa-blue;
+}
+
+.button-disabled {
+    @apply bg-josa-grey-500 !important;
+}
+
+.button-disabled:hover {
+    @apply text-white !important;
+}
+
+.blue-line::after {
+    margin-top: 5px;
+    content: "";
+    width: 120px;
+    border-bottom: solid 5px theme('colors.josa.blue');
+    display: block;
+}
+
+.contact-card {
+    width: 100%;
+    padding:0px;
+    border-radius: 0.375rem;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.trust-cards{
+  flex-direction: column;
+  margin-top:20px;
+  justify-content: space-between;
+
+}
+.title{
+  @apply text-4xl m-0
+}
+
+.colorabove{
+  @apply h-5 w-full m-0 p-0;
+  border-radius: 0.375rem;
+  @apply rounded-b-none;
+  margin-below: 0px;
+}
+.tooltip {
+    @apply relative;
+}
+
+.tooltip-text {
+    @apply p-2 w-full absolute z-10 bg-josa-black text-white text-center rounded-md opacity-75;
+    top: 102%;
+    right: 0;
+}
+
+.tooltip:hover .tooltip-text {
+    @apply visible;
+}
+
+.fa-icon {
+    @apply ml-2
+}
+
+/* purgecss start ignore */
+/* Zammad form */
+.zammad-form {
+    @apply text-josa-blue-oxfordBlue;
+}
+
+.zammad-form label {
+    @apply hidden;
+}
+
+.zammad-form .form-control {
+    @apply text-josa-blue-oxfordBlue border border-solid rounded p-3;
+    border-color: rgba(43, 41, 45, 0.2);
+}
+
+.zammad-form .form-control[type="file"] {
+    @apply border-none px-0;
+}
+
+.zammad-form button {
+    @apply bg-josa-blue inline-block text-white rounded-md px-6 py-2 font-frutigerLTArabicRoman;
+}
+
+.zammad-form button:hover {
+    color: rgba(255, 255, 255, 0.7)
+}
+
+/* Zammad Chat */
+.zammad-chat {
+    text-align: left;
+    font-family: 'lato';
+}
+
+.zammad-chat-agent-status::before {
+    margin-right: 0;
+    margin-left: 0.3rem;
+}
+
+.zammad-chat-message--agent {
+    text-align: left;
+}
+
+.zammad-chat-agent-name {
+    font-size: 1rem;
+}
+
+.zammad-chat-message-body {
+    @apply font-frutigerLTArabicLight;
+}
+
+.zammad-chat-icon {
+    float: right;
+}
+
+.zammad-chat-welcome-text {
+    display: inline-block;
+    font-weight: bold;
+}
+
+.zammad-chat-input {
+    @apply font-frutigerLTArabicLight text-right !important;
+}
+
+/* purgecss end ignore */
+
+.below,
+.contact-card button,
+.contact-card a.button {
+    min-width: 110px;
+}
+.button {
+    font-size: 9px;
+}
+.below{
+padding: 25%;
+margin:0px;
+padding-top:10px;
+padding-bottom:10px;
+
+}
+.title{
+  font-size: 30px;
+  margin-top:0px;
+  padding-top:0px;
+}
+/* sm */
+@screen sm {
+  .button {
+      @apply text-xs;
+  }
+
+    .below,
+    .contact-card button,
+    .contact-card a.button {
+        min-width: 140px;
+    }
+    .title{
+      @apply text-3xl mt-4;
+    }
+
+}
+
+/* md */
+@screen md {
+
+    .button {
+        @apply text-xs px-4;
+    }
+    .below,
+    .contact-card button,
+    .contact-card a.button {
+        min-width: 140px;
+    }
+
+    h1 {
+        @apply text-4xl mb-5;
+    }
+
+    h2 {
+        @apply text-4xl;
+    }
+
+    p {
+        @apply text-xl;
+    }
+    .title{
+      @apply text-3xl;
+    }
+}
+
+/* lg */
+@screen lg {
+  .button {
+      @apply text-sm ;
+  }
+  .below,
+  .contact-card button,
+    .contact-card a.button {
+        min-width: 200px;
+    }
+    .title{
+      @apply text-2xl;
+    }
+}
+
+/* xl */
+@screen xl {
+  .button {
+      @apply text-lg mx-0;
+  }
+      .below,
+    .contact-card button,
+  .contact-card a.button {
+      width: 100%;
+  }
+
+    h1 {
+        @apply text-5xl;
+    }
+
+    h2 {
+        @apply text-5xl;
+    }
+
+    p {
+        @apply text-xl;
+    }
+    .below{
+      max-width: 450px;
+    }
+    .title{
+      font-size: 26px;
+    }
+}
+
+.phone{
+@apply m-0;
+
+}
+.email{
+  @apply m-0;
+}
+.chat{
+  @apply m-0;
+}

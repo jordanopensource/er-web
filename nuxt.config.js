@@ -1,3 +1,4 @@
+const webpack = require('webpack')
 
 export default {
   /*
@@ -23,12 +24,32 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+    ],
+    script:[
+      {
+          src:"https://code.jquery.com/jquery-3.5.1.slim.min.js",
+          integrity: "sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=",
+          crossorigin:"anonymous",
+          type: "text/javascript"
+        },
+        {
+          src: 'https://ots.jordanopensource.org/assets/chat/chat.min.js',
+          body: true,
+          type: "text/javascript"
+          },
+          {
+            src: 'https://ots.jordanopensource.org/assets/form/form.js',
+              id: 'zammad_form_script',
+              body: true,
+              type: "text/javascript"
+            },
     ]
   },
   /*
   ** Global CSS
   */
   css: [
+    "~assets/css/main.css"
   ],
   /*
   ** Plugins to load before mounting the App
@@ -52,11 +73,36 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
+    ['nuxt-fontawesome', {
+    imports: [
+      //import whole set
+      {
+        set: '@fortawesome/free-solid-svg-icons',
+        icons: ['fas']
+      },
+      {
+         set:'@fortawesome/free-brands-svg-icons',
+         icons: ['fab']
+       }
+    ]
+  }]
   ],
   /*
   ** Build configuration
   ** See https://nuxtjs.org/api/configuration-build/
   */
+
+  // other configs
   build: {
-  }
+    plugins: [
+      new webpack.ProvidePlugin({
+        $: 'jquery',
+        jQuery: 'jquery',
+        'window.jQuery': 'jquery'
+      })
+    ]
+  },
+  // other configs
+
+
 }
