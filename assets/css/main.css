@@ -117,13 +117,6 @@ p {
   @apply flex-grow;
 }
 
-.trust-cards {
-  flex-direction: column;
-  margin-top: 20px;
-  justify-content: space-between;
-
-}
-
 .colorabove {
   @apply h-5 w-full m-0 p-0 rounded-md rounded-b-none mb-0;
 }
