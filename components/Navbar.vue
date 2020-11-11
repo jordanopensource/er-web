@@ -90,7 +90,7 @@
   }
 
   .nav-link {
-    @apply text-white py-2 block font-theMixArabBold;
+    @apply text-white py-2 block;
     padding-right: 55px;
   }
 

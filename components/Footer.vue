@@ -109,7 +109,7 @@
   }
 
   .nav-link {
-    @apply text-white py-2 block font-theMixArabBold;
+    @apply text-white py-2 block;
     padding-right: 55px;
   }
 
@@ -137,7 +137,7 @@
   }
 
   a {
-      @apply inline-block font-theMixArab text-josa-blue-oxfordBlue text-base
+      @apply inline-block text-josa-blue-oxfordBlue text-base
   }
 
   a:hover {

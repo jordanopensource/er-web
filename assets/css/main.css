@@ -2,79 +2,32 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: 'TheMixArab';
-  font-weight: normal;
-  font-weight: 300;
-  src: url('../fonts/TheMixArab/TheMixArab.ttf') format("ttf"),
-    url('../fonts/TheMixArab/TheMixArab.eot') format("eot"),
-    url('../fonts/TheMixArab/TheMixArab.woff') format("woff"),
-    url('../fonts/TheMixArab/TheMixArab.woff2') format("woff2");
-}
-
-@font-face {
-  font-family: 'TheMixArabBold';
-  font-weight: normal;
-  font-weight: 300;
-  src: url('../fonts/TheMixArab/TheMixArab-Bold.ttf') format("ttf"),
-    url('../fonts/TheMixArab/TheMixArab-Bold.eot') format("eot"),
-    url('../fonts/TheMixArab/TheMixArab-Bold.woff') format("woff"),
-    url('../fonts/TheMixArab/TheMixArab-Bold.woff2') format("woff2");
-}
-
-@font-face {
-  font-family: 'FrutigerLTArabic-45Light';
-  font-weight: normal;
-  font-weight: 300;
-  src: url('../fonts/FrutigerLTArabic/FrutigerLTArabic-45Light.ttf') format("ttf"),
-    url('../fonts/FrutigerLTArabic/FrutigerLTArabic-45Light.eot') format("eot"),
-    url('../fonts/FrutigerLTArabic/FrutigerLTArabic-45Light.woff') format("woff");
-}
-
-@font-face {
-  font-family: 'FrutigerLTArabic-65Bold';
-  font-weight: normal;
-  font-weight: 300;
-  src: url('../fonts/FrutigerLTArabic/FrutigerLTArabic-65Bold.ttf') format("ttf"),
-    url('../fonts/FrutigerLTArabic/FrutigerLTArabic-65Bold.eot') format("eot"),
-    url('../fonts/FrutigerLTArabic/FrutigerLTArabic-65Bold.woff') format("woff");
-}
-
-@font-face {
-  font-family: 'FrutigerLTArabic-55Roman';
-  font-weight: normal;
-  font-weight: 300;
-  src: url('../fonts/FrutigerLTArabic/FrutigerLTArabic-55Roman.ttf') format("ttf"),
-    url('../fonts/FrutigerLTArabic/FrutigerLTArabic-55Roman.eot') format("eot"),
-    url('../fonts/FrutigerLTArabic/FrutigerLTArabic-55Roman.woff') format("woff");
-}
-
 h1 {
-  @apply text-3xl leading-11 font-theMixArabBold font-bold mb-3;
+  @apply text-3xl leading-11 font-almarai font-bold mb-3;
 }
 
 h2 {
-  @apply text-2xl leading-11 font-theMixArab font-bold mb-2;
+  @apply text-2xl leading-11 font-almarai font-bold mb-2;
 }
 
 h3 {
-  @apply text-175 leading-10 text-josa-blue-oxfordBlue font-theMixArab font-bold;
+  @apply text-175 leading-10 text-josa-blue-oxfordBlue font-almarai font-bold;
 }
 
 h4 {
-  @apply text-xl mr-5 font-frutigerLTArabicBold leading-9;
+  @apply text-xl mr-5 font-almarai leading-9;
 }
 
 h5 {
-  @apply text-lg text-josa-blue font-bold font-theMixArab;
+  @apply text-lg text-josa-blue font-bold font-almarai;
 }
 
 p {
-  @apply leading-8 text-xl text-josa-blue-veryDark font-frutigerLTArabicLight;
+  @apply leading-8 text-xl text-josa-blue-veryDark font-almarai;
 }
 
 .button {
-  @apply inline-block text-white text-base font-bold rounded-md border-2 border-solid border-white px-3 py-3 my-4 font-frutigerLTArabicRoman break-words leading-8;
+  @apply inline-block text-white text-base font-bold rounded-md border-2 border-solid border-white px-3 py-3 my-4 font-almarai break-words leading-8;
 }
 
 .button:hover {
@@ -159,7 +112,7 @@ p {
 }
 
 .zammad-form button {
-  @apply bg-josa-blue inline-block text-white rounded-md px-6 py-2 font-frutigerLTArabicRoman;
+  @apply bg-josa-blue inline-block text-white rounded-md px-6 py-2 font-almarai;
 }
 
 .zammad-form button:hover {
@@ -169,7 +122,7 @@ p {
 /* Zammad Chat */
 .zammad-chat {
   text-align: left;
-  font-family: 'lato';
+  font-family: 'Almarai';
 }
 
 .zammad-chat-agent-status::before {
@@ -186,7 +139,7 @@ p {
 }
 
 .zammad-chat-message-body {
-  @apply font-frutigerLTArabicLight;
+  @apply font-almarai;
 }
 
 .zammad-chat-icon {
@@ -199,7 +152,7 @@ p {
 }
 
 .zammad-chat-input {
-  @apply font-frutigerLTArabicLight text-right !important;
+  @apply font-almarai text-right !important;
 }
 
 /* purgecss end ignore */

@@ -80,7 +80,12 @@
 
 <style scoped>
   p {
-    @apply font-theMixArab self-center;
+    @apply self-center;
+  }
+
+  .tooltip-text {
+    direction: ltr;
+    font-family: 'lato';
   }
 
   .copy-tooltip-text {

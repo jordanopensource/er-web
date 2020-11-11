@@ -126,7 +126,7 @@
 
 <style scoped>
   p {
-    @apply font-theMixArab self-center;
+    @apply self-center;
   }
 
 

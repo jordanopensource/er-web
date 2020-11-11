@@ -72,11 +72,12 @@
 
 <style scoped>
   p {
-    @apply font-theMixArab self-center;
+    @apply self-center;
   }
 
   .button {
     @apply bg-red-700;
+    font-family: 'lato';
   }
 
   .copy-tooltip-text {
