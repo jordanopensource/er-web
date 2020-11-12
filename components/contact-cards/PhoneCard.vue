@@ -1,104 +1,88 @@
 <template>
-    <div class="contact-card phone m-0">
+  <div class="phone">
     <div class="bg-red-700 colorabove"></div>
     <div class="below">
-        <h2 class="text-black title">{{ josaPlatform.title }}</h2>
-         <p class=" text-gray-600 text-xs" v-for="d in josaPlatform.description" :name="d">{{d}} </p>
-
-<!--
-            {{ cardText }}
-            <span class="tooltip">
-                <font-awesome-icon @click="copy" class="copy-icon" :icon="['fas', 'copy']" />
-                <div ref="copyTooltip" class="copy-tooltip-text invisible"></div>
-            </span>
--->
-
-        <button class="button tooltip block" @click="copy">
-            <font-awesome-icon class="fa-icon" :icon="iconClasses" />
-            <bdo dir="ltr">
-            {{ phone }}
-            </bdo>
-        </button>
+      <h2 class="text-black">{{ title }}</h2>
+      <div class="description">
+        <p class="text-gray-600 text-base" v-for="(text,index) in description" :key="index">{{text}}</p>
+      </div>
+      <button class="button tooltip block" @click="copy">
+        <font-awesome-icon class="fa-icon" :icon="iconClasses" />
+        <bdo dir="ltr">
+          {{ phone }}
+        </bdo>
+      </button>
     </div>
-    </div>
+  </div>
 </template>
 
 <script>
-    export default {
-
-        props: {
-            name: {
-                type: String,
-                required: true
-            },
-            arabicName: {
-                type: String,
-                required: true
-            },
-            iconName: {
-                type: String,
-                required: true
-            },
-            phone: {
-                type: String,
-                required: true
-            }
-        },
-        computed: {
-            cardText() {
-                return 'اتصل بنا على ' + this.arabicName
-            },
-            iconClasses() {
-                return ['fas', this.iconName]
-            }
-        },
-
-        methods: {
-            copy() {
-                const phone = this.phone
-                const copyTooltip = this.$refs.copyTooltip
-                this.$copyText(phone).then((e) => {
-                        copyTooltip.classList.toggle("invisible")
-                        copyTooltip.innerText = "Copied!"
-                        setTimeout(() => {
-                            copyTooltip.classList.toggle("invisible")
-                            copyTooltip.innerText = ""
-                        }, 2000)
-                    })
-                    .catch((e) => {
-                        copyTooltip.innerText = "Can not copy!"
-                    })
-            }
-        },
-        data() {
-          return {
-                josaPlatform: {
-                title: 'حالات الطوارئ',
-                description: ['الابتزاز',
-                'التصيد',
-                'اختراق الحسابات واسترجاعها',
-                'انتحال  للشخصيةي',
-                'حل الهجمات الرقمية DDOS',
-                'فيديوهات مفبركة']   },
-          }
-        },
-
+  export default {
+    props: {
+      name: {
+        type: String,
+        required: true
+      },
+      title: {
+        type: String,
+        required: true
+      },
+      iconName: {
+        type: String,
+        required: true
+      },
+      buttonText: {
+        type: String,
+        required: true
+      },
+      description: {
+        type: Array,
+        required: true
+      },
+      phone: {
+        type: String,
+        required: true
+      }
+    },
+    computed: {
+      iconClasses() {
+        return ['fas', this.iconName]
+      }
+    },
+    methods: {
+      copy() {
+        const phone = this.phone
+        const copyTooltip = this.$refs.copyTooltip
+        this.$copyText(phone).then((e) => {
+            copyTooltip.classList.toggle("invisible")
+            copyTooltip.innerText = "Copied!"
+            setTimeout(() => {
+              copyTooltip.classList.toggle("invisible")
+              copyTooltip.innerText = ""
+            }, 2000)
+          })
+          .catch((e) => {
+            copyTooltip.innerText = "Can not copy!"
+          })
+      }
     }
+  }
+
 </script>
 
 <style scoped>
-    p {
-        @apply font-theMixArab self-center;
-    }
+  p {
+    @apply self-center;
+  }
 
-    .button {
-        @apply bg-red-700;
-    }
+  .button {
+    @apply bg-red-700;
+    font-family: 'lato';
+  }
 
-    .copy-tooltip-text {
-        direction: ltr;
-        font-family: 'lato';
-    }
-
+  .copy-tooltip-text {
+    direction: ltr;
+    font-family: 'lato';
+  }
 
 </style>

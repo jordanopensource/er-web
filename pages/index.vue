@@ -1,22 +1,15 @@
 <template>
   <div>
-
-
     <!-- Banner -->
     <Banner />
-
     <!-- Get Help -->
     <GetHelp />
-
     <!-- Team -->
     <Team />
-
     <!-- Trust -->
     <Trust />
-
     <!-- Footer -->
     <Footer />
-
   </div>
 </template>
 
@@ -28,7 +21,7 @@
   import Trust from '~/components/Trust'
 
   export default {
-  layout:"default",
+    layout: "default",
     components: {
       Banner,
       Team,
@@ -37,4 +30,5 @@
       Trust
     }
   }
+
 </script>

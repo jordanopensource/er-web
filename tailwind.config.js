@@ -19,13 +19,8 @@ module.exports = {
                 }
             },
             fontFamily: {
-                'theMixArab': 'TheMixArab',
-                'theMixArabBold': 'TheMixArabBold',
-                'frutigerLTArabicLight': 'FrutigerLTArabic-45Light',
-                'frutigerLTArabicRoman': 'FrutigerLTArabic-55Roman',
-                'frutigerLTArabicBold': 'FrutigerLTArabic-65Bold',
+              'almarai': 'Almarai',
             },
-
             fontSize: {
                 '175': '1.75rem'
             },

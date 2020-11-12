@@ -1,81 +1,59 @@
 <template>
   <div class="bg-white p-10">
-  <div class="container my-10">
-    <h1>{{ title }}</h1>
+    <div class="container my-10">
+      <h1 class="text-center">{{ title }}</h1>
+      <div class="w-auto inline-block mt-0">
+        <div class="my-10 grid grid-cols-2 lg:grid-cols-3 gap-8">
+          <trustCard v-for="(card,index) in cards" :title="card.title" :description="card.description" :image="card.image" :key="index"/>
+        </div>
+      </div>
 
-    <div class="w-auto inline-block mt-0">
-
-    <div class="grid grid-cols-3 gap-4 justify-items-stretch h-auto mt-0">
-    <card1 :name="card1.name" :arabicName="card1.arabicName"
-      v-once class=" text-center bg-white  inline-block flex justify-center items-center m-0"/>
-    <card2 :name="card2.name" :arabicName="card2.arabicName"
-      v-once class=" text-center bg-white  inline-block flex justify-center items-center m-0"/>
-    <card3 :name="card3.name" :arabicName="card3.arabicName"
-      v-once class=" text-center bg-white  inline-block flex justify-center items-center m-0"/>
-    <card4 :name="card4.name" :arabicName="card4.arabicName"
-      v-once class=" text-center bg-white  inline-block flex justify-center items-center m-0"/>
-    <card5 :name="card5.name" :arabicName="card5.arabicName"
-      v-once class=" text-center bg-white  inline-block flex justify-center items-center m-0"/>
-    <card6 :name="card6.name" :arabicName="card6.arabicName"
-      v-once class=" text-center bg-white  inline-block flex justify-center items-center m-0"/>
-     </div>
-  </div>
-
-</div>
     </div>
+  </div>
 </template>
 
 <script>
-    import card1 from '~/components/trust-cards/card1';
-    import card2 from '~/components/trust-cards/card2';
-    import card3 from '~/components/trust-cards/card3';
-    import card4 from '~/components/trust-cards/card4';
-    import card5 from '~/components/trust-cards/card5';
-    import card6 from '~/components/trust-cards/card6';
-
-    export default {
-        components: {
-            card1,
-            card2,
-            card3,
-            card4,
-            card5,
-            card6,
-
-        },
-        data() {
-            return {
-                title: 'لماذا نحن أهلٌ للثقة؟ ',
-                card1: {
-                    name: "1",
-                    arabicName: "جهة رسمية مسجلة",
-                },
-
-                card2: {
-                    name: "2",
-                    arabicName: "شركاءٌ معتمدون",
-                },
-
-                card3: {
-                    name: "3",
-                    arabicName: "فريق تقني مختص",
-                },
-
-                card4: {
-                    name: "4",
-                    arabicName: "استجابة سريعة",
-                },
-
-                card5: {
-                    name: "5",
-                    arabicName: "خدمة سرية",
-                },
-
-                card6: {
-                    name: "6",
-                    arabicName: "خدمة مجانية",
-                },
-            }
-        }
+  import trustCard from '~/components/TrustCard';
+  export default {
+    components: {
+      trustCard
+    },
+    data() {
+      return {
+        title: 'لماذا نحن أهلٌ للثقة؟ ',
+        cards: [{
+            title: 'جهة رسمية مسجلة',
+            description: 'مسجلون كمنظمة غير ربحية لدى وزارة الاقتصاد الرقمي والريادة',
+            image: '/group-10.svg'
+          },
+          {
+            title: 'شركاءٌ معتمدون',
+            description: 'منها منظمة RARENET الدولية للاستجابة الرقمية ومنظمة AccessNow',
+            image: "/group-9.svg"
+          },
+          {
+            title: 'فريق تقني مختص',
+            description: 'فريق متعدد الاختصاصات ومؤهل في أمهر طرق للمساعدة الرقمية يُقدّم توصيات مختصة',
+            image: "/group-8.svg"
+          },
+          {
+            title: 'استجابة سريعة',
+            description: 'رد سريع للمشاكل الرقمية خلال 24 ساعة من 9 صباحاً وحتى 9 مساءً',
+            image: "/group-11.svg"
+          },
+          {
+            title: 'خدمة سرية',
+            description: 'لن يُفْصَحَ عن أي معلومة تُقدّمها عبر المنصة لإيماننا أن أهم مبادئ الأمن الرقمي هي السرية والخصوصية',
+            image: "/group-12.svg"
+          },
+          {
+            title: 'خدمة مجانية',
+            description: 'نحن منظمة غير ربحية ولن نطلب أي مبلغ مادي لقاء الخدمة المقدمة',
+            image: "/group-10.svg"
+          }
+        ]
+      }
     }
+  }
+
 </script>
