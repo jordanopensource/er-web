@@ -1,5 +1,3 @@
-const webpack = require('webpack')
-
 export default {
   /*
   ** Nuxt rendering mode
