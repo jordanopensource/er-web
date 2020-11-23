@@ -1,22 +1,15 @@
 <template>
   <div class="layout" style="direction:rtl">
-    <header class="header bg-josa-blue-veryDark">
-      <navbar />
-      </header>
-      <Nuxt />
+    <appHeader />
+    <Nuxt />
   </div>
 </template>
 
-
 <script>
-  import Navbar from '~/components/Navbar.vue';
+  import appHeader from '~/components/Header';
   export default {
     components: {
-      Navbar
+      appHeader
     }
   }
 </script>
-
-<style>
-
-</style>
