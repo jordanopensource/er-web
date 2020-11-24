@@ -1,9 +1,7 @@
 <template>
-<div class="bg-josa-blue-veryDark">
-  <div class="flex items-center justify-between flex-wrap bg-josa-blue-veryDark py-10 container">
-
-    <div class="flex items-center flex-shrink-0 text-white">
-      <a href="https://www.jordanopensource.org" target="_blank">
+  <div class="bg-josa-blue-veryDark">
+    <div class="flex items-center justify-between flex-wrap bg-josa-blue-veryDark py-12 container">
+      <a href="https://www.jordanopensource.org" target="_blank" class="block my-4">
         <svg width="160px" height="48px" viewBox="0 0 160 48" version="1.1" xmlns="http://www.w3.org/2000/svg"
           xmlns:xlink="http://www.w3.org/1999/xlink">
           <!-- Generator: Sketch 58 (84663) - https://sketch.com -->
@@ -25,142 +23,40 @@
           </g>
         </svg>
       </a>
+      <div id="social-menu" class="inline-block my-4">
+        <a href="https://www.instagram.com/jordanopensource/" target="_blank">
+          <font-awesome-icon class="fa-icon" :icon="['fab', 'instagram']" />
+        </a>
+        <a href="https://twitter.com/jo_osa" target="_blank">
+          <font-awesome-icon class="fa-icon" :icon="['fab', 'twitter']" />
+        </a>
+        <a href="https://web.facebook.com/jordanopensource/" target="_blank">
+          <font-awesome-icon class="fa-icon" :icon="['fab', 'facebook']" />
+        </a>
+      </div>
     </div>
-
-    <div class="block sm:hidden">
-      <button @click="menuActive" class="hamburger hamburger--spin" :class="isOpen ? 'is-active' : ''" type="button">
-        <span class="hamburger-box">
-          <span class="hamburger-inner"></span>
-        </span>
-      </button>
-    </div>
-    <div id="footer">
-           <div class="container text-center md:text-right">
-               <div class="flex justify-between flex-wrap flex-col md:flex-row">
-                   <div id="social-menu">
-                       <a href="https://www.instagram.com/jordanopensource/" target="_blank">
-                           <font-awesome-icon class="fa-icon" :icon="['fab', 'instagram']" />
-                       </a>
-                       <a href="https://twitter.com/jo_osa" target="_blank">
-                           <font-awesome-icon class="fa-icon" :icon="['fab', 'twitter']" />
-                       </a>
-                       <a href="https://web.facebook.com/jordanopensource/" target="_blank">
-                           <font-awesome-icon class="fa-icon" :icon="['fab', 'facebook']" />
-                       </a>
-                   </div>
-               </div>
-
-           </div>
-       </div>
   </div>
-</div>
 </template>
 
-<script>
-  export default {
-    name: 'Navbar',
-    data() {
-      return {
-        isOpen: false
-      }
-    },
-    methods: {
-      menuActive() {
-        this.isOpen = !this.isOpen
-
-      }
-    }
-  }
-</script>
-
 <style scoped>
-  .hamburger {
-    line-height: 1;
-    padding: 0;
-  }
-
-  .hamburger.is-active .hamburger-inner,
-  .hamburger.is-active .hamburger-inner::after,
-  .hamburger.is-active .hamburger-inner::before {
-    background-color: white !important;
-    width: 32px !important;
-    height: 2px !important;
-  }
-
-  .hamburger-inner,
-  .hamburger-inner::after,
-  .hamburger-inner::before {
-    background-color: white !important;
-    width: 32px !important;
-    height: 2px !important;
-  }
-
-  .hamburger-box {
-    width: 32px !important;
-  }
-
-  .menu-content {
-    -webkit-transition: max-height 1s;
-    -moz-transition: max-height 1s;
-    -ms-transition: max-height 1s;
-    -o-transition: max-height 1s;
-    transition: max-height 1s;
-    overflow: hidden;
-  }
-
-  .nav-link {
-    @apply text-white py-2 block;
-    padding-right: 55px;
-  }
-
-  .nav-link:hover {
-    color: rgba(255, 255, 255, 0.7)
-  }
-
-  @screen sm {
-    .nav-link {
-      @apply inline-block px-4;
-    }
-  }
-
-  .vertical-line {
-    @apply border-l my-2
-  }
-
-  @screen md {
-    .nav-link {
-      @apply inline-block px-8;
-    }
-  }
-  h3 {
-      @apply inline-block mb-5;
-  }
-
-  a {
-      @apply inline-block text-josa-blue-oxfordBlue text-base
-  }
-
   a:hover {
-      opacity: 0.7;
-  }
-
-  #social-menu {
-      @apply inline-block
+    opacity: 0.8;
   }
 
   #social-menu a {
-      margin-left: 50px;
+    margin-left: 1rem;
   }
 
   #social-menu a:last-child {
-      margin-left: 0;
+    margin-left: 0;
   }
 
   #footer-menu a {
-      width: 100;
+    width: 100;
   }
 
-  .fa-icon{
-  color: white;
+  .fa-icon {
+    color: white;
   }
+
 </style>

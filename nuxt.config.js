@@ -67,7 +67,16 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
-    'nuxt-clipboard2'
+    'nuxt-clipboard2',
+    ['nuxt-fontawesome',
+    {
+      imports: [
+       {
+         set:'@fortawesome/free-brands-svg-icons',
+         icons: ['fab']
+       }
+     ]
+    }],
   ],
   /*
   ** Build configuration
