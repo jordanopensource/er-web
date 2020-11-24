@@ -112,14 +112,6 @@
     @apply inline-block mt-6 ml-4;
   }
 
-  .icon {
-    width: 16px;
-    height: 19.2px;
-    object-fit: contain;
-    display: inline;
-    margin-left: 15px;
-  }
-
   .button-email .tooltip-text {
     width: auto;
     right: -4px;
@@ -130,6 +122,17 @@
     left: -75px;
     direction: ltr;
     font-family: 'lato';
+  }
+
+</style>
+
+<style>
+  .icon {
+    width: 16px;
+    height: 19.2px;
+    object-fit: contain;
+    display: inline;
+    margin-left: 15px;
   }
 
 </style>
