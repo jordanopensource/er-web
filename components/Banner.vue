@@ -27,7 +27,7 @@
                   {{ form }}
                 </button>
                 <button class="button button-light tooltip button-email">
-                  <a :href="emailLink">
+                  <a :href="'mailto:' + emailAddress">
                     <img src="/icons/envelop.svg" alt="envelop" class="icon">
                     {{ email }}
                   </a>
@@ -62,7 +62,6 @@
         form: 'نموذج  الكتروني',
         email: 'بريد الكتروني',
         emailAddress: 'er@jordanopensource.org',
-        emailLink: "mailto:" + this.emailAddress,
         whatsapp: 'واتساب'
       }
     },
