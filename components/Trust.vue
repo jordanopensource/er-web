@@ -23,22 +23,22 @@
         cards: [{
             title: 'خدمة سرية',
             description: 'لن يُفْصَحَ عن أي معلومة تُقدّمها عبر المنصة لإيماننا أن أهم مبادئ الأمن الرقمي هي السرية والخصوصية',
-            image: "/group-12.svg"
+            image: "/icons/group-9.svg"
           },
           {
             title: 'خدمة مجانية',
             description: 'نحن منظمة غير ربحية ولن نطلب أي مبلغ مادي مقابل هذه الخدمة المقدمة',
-            image: "/group-10.svg"
+            image: "/icons/group-7.svg"
           },
           {
             title: 'استجابة سريعة',
             description: 'ساعات العمل لدينا من ٩ صباحًا إلى ٦ مساءً بتوقيت الأردن',
-            image: "/group-11.svg"
+            image: "/icons/group-11.svg"
           },
           {
             title: 'فريق تقني مختص',
             description: 'فريق متعدد الاختصاصات ومؤهل في أمهر طرق للمساعدة الرقمية يُقدّم توصيات مختصة',
-            image: "/group-8.svg"
+            image: "/icons/group-8.svg"
           }
         ]
       }
