@@ -33,6 +33,12 @@
                   </a>
                   <div class="tooltip-text invisible font-lato">{{ emailAddress }}</div>
                 </button>
+                <button class="button button-light">
+                  <a href="https://wa.me/962770700099" target="_blank">
+                    <img src="/icons/chat.svg" alt="chat" class="icon">
+                    {{ whatsapp }}
+                  </a>
+                </button>
               </div>
             </div>
           </div>
@@ -56,7 +62,8 @@
         form: 'نموذج  الكتروني',
         email: 'بريد الكتروني',
         emailAddress: 'er@jordanopensource.org',
-        emailLink: "mailto:" + this.emailAddress
+        emailLink: "mailto:" + this.emailAddress,
+        whatsapp: 'واتساب'
       }
     },
     mounted() {
