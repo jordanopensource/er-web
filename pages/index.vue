@@ -2,10 +2,10 @@
   <div>
     <!-- Banner -->
     <Banner />
-    <!-- Get Help -->
-    <Team />
     <!-- Trust -->
     <Trust />
+    <!-- Get Help -->
+    <Team />
     <!-- Footer -->
     <Footer />
   </div>
