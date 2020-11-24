@@ -3,27 +3,29 @@
 @tailwind utilities;
 
 h1 {
-  @apply text-3xl leading-11 font-almarai font-bold mb-6;
+  @apply font-almarai text-4xl leading-10 mb-4;
 }
 
 h2 {
-  @apply text-2xl leading-11 font-almarai font-bold mb-2;
-}
-
-h3 {
-  @apply text-175 leading-10 text-josa-blue-oxfordBlue font-almarai font-bold;
-}
-
-h4 {
-  @apply text-xl mr-5 font-almarai leading-9;
-}
-
-h5 {
-  @apply text-lg text-josa-blue font-bold font-almarai;
+  @apply font-almarai text-2xl leading-8 mb-2;
 }
 
 p {
-  @apply leading-8 text-xl text-josa-blue-veryDark font-almarai;
+  @apply font-almarai leading-6 text-base;
+}
+
+@screen sm {
+  h1 {
+    @apply text-5xl leading-11 font-almarai mb-6;
+  }
+
+  h2 {
+    @apply text-3xl leading-9 font-almarai mb-2;
+  }
+
+  p {
+    @apply leading-8 text-lg font-almarai;
+  }
 }
 
 .button {
@@ -31,9 +33,7 @@ p {
 
 }
 
-.button:hover {
-
-}
+.button:hover {}
 
 .button-dark {
   background-color: rgba(255, 255, 255, 0.1);
@@ -182,77 +182,4 @@ p {
   padding-top: 10px;
   padding-bottom: 10px;
 
-}
-
-
-/* sm */
-@screen sm {
-
-  .below,
-  .contact-card button,
-  .contact-card a.button {
-    min-width: 140px;
-  }
-}
-
-/* md */
-@screen md {
-
-  .below {
-    padding: 2rem;
-  }
-
-  .below,
-  .contact-card button,
-  .contact-card a.button {
-    min-width: 140px;
-  }
-
-  p {
-    @apply text-xl;
-  }
-}
-
-/* lg */
-@screen lg {
-  .below {
-    padding: 3rem;
-  }
-
-  .below,
-  .contact-card button,
-  .contact-card a.button {
-    min-width: 200px;
-  }
-
-  h1 {
-    @apply text-5xl;
-  }
-
-  h2 {
-    @apply text-4xl;
-  }
-
-}
-
-/* xl */
-@screen xl {
-  .button {
-    @apply text-lg mx-0;
-  }
-
-  .below,
-  .contact-card button,
-  .contact-card a.button {
-    width: 100%;
-  }
-
-
-  p {
-    @apply text-xl;
-  }
-
-  .below {
-    max-width: 450px;
-  }
 }
