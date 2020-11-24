@@ -23,6 +23,7 @@ export default {
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel:"stylesheet", href:"https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap"},
+      { rel: 'stylesheet', href:'https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap' },
     ],
     script:[
         {
@@ -35,12 +36,12 @@ export default {
           body: true,
           type: "text/javascript"
         },
-        // {
-        //   src: 'https://ots.jordanopensource.org/assets/form/form.js',
-        //   id: 'zammad_form_script',
-        //   body: true,
-        //   type: "text/javascript"
-        // },
+        {
+          src: 'https://ots.jordanopensource.org/assets/form/form.js',
+          id: 'zammad_form_script',
+          body: true,
+          type: "text/javascript"
+        },
     ]
   },
   /*
@@ -71,19 +72,7 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
-    ['nuxt-fontawesome', {
-    imports: [
-      //import whole set
-      {
-        set: '@fortawesome/free-solid-svg-icons',
-        icons: ['fas']
-      },
-      {
-         set:'@fortawesome/free-brands-svg-icons',
-         icons: ['fab']
-       }
-    ]
-  }]
+    'nuxt-clipboard2'
   ],
   /*
   ** Build configuration

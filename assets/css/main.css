@@ -27,27 +27,37 @@ p {
 }
 
 .button {
-  @apply inline-block text-white text-base font-bold rounded-md border-2 border-solid border-white px-3 py-3 my-4 font-almarai break-words leading-8;
+  @apply inline-block font-bold text-white text-base py-4 font-almarai break-words leading-normal;
+
 }
 
 .button:hover {
-  color: rgba(255, 255, 255, 0.7)
+
 }
 
 .button-dark {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-.button-light {
+.button-blue {
   @apply bg-josa-blue;
 }
 
-.button-disabled {
-  @apply bg-josa-grey-500 !important;
+.button-light {
+  @apply bg-transparent text-josa-black border border-solid border-josa-black;
 }
 
-.button-disabled:hover {
-  @apply text-white !important;
+.button-light-disabled {
+  @apply text-josa-grey-500 border-josa-grey-500;
+}
+
+.button-red {
+  @apply bg-josa-red;
+}
+
+.button-red-shadow {
+  @apply bg-josa-red;
+  box-shadow: -8px 8px 0 0 #b83b10;
 }
 
 .blue-line::after {
@@ -79,9 +89,8 @@ p {
 }
 
 .tooltip-text {
-  @apply p-2 w-full absolute z-10 bg-josa-black text-white text-center rounded-md opacity-75;
-  top: 102%;
-  right: 0;
+  @apply p-2 w-full absolute z-10 bg-josa-black text-white text-center rounded-md opacity-75 right-0 mt-2;
+  top: 100%;
 }
 
 .tooltip:hover .tooltip-text {
