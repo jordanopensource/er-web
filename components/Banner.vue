@@ -14,6 +14,7 @@
           <div>
             <div>
               <button @click="copy" class="button button-red button-red-shadow tooltip">
+                <img src="/icons/phone.svg" alt="phone" class="icon">
                 <bdo dir="ltr" class="font-lato">{{ phone }}</bdo>
                 <span class="copy-tooltip-text invisible"></span>
               </button>
@@ -22,18 +23,18 @@
               <p class="font-bold">{{ others }}</p>
               <div>
                 <button ref="supportform" class="button button-light">
-                  <!-- <img src="~/static/icons/form.svg" alt="envelop" class="icon"> -->
+                  <img src="/icons/form.svg" alt="form" class="icon">
                   {{ form }}
                 </button>
                 <button class="button button-light tooltip button-email">
                   <a :href="emailLink">
-                    <!-- <img src="~/static/icons/envelop.svg" alt="envelop" class="icon"> -->
+                    <img src="/icons/envelop.svg" alt="envelop" class="icon">
                     {{ email }}
                   </a>
                   <div class="tooltip-text invisible font-lato">{{ emailAddress }}</div>
                 </button>
                 <button ref="chatbutton" class="button-light-disabled button button-light open-zammad-chat tooltip">
-                  <!-- <img src="~/static/icons/form.svg" alt="form" class="icon"> -->
+                  <img src="/icons/chat.svg" alt="chat" class="icon">
                   {{ chat }}
                   <div class="tooltip-text invisible">{{ chatNotAvailable }}</div>
                 </button>
@@ -41,7 +42,7 @@
             </div>
           </div>
         </div>
-        <img class="bot lg:mt-6 mb-8 lg:mb-0 mx-auto" src="~/static/bots/banner-bot.svg">
+        <img class="bot lg:mt-6 mb-8 lg:mb-0 mx-auto" src="/bots/banner-bot.svg">
       </div>
     </div>
   </div>
