@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 h1 {
-  @apply text-3xl leading-11 font-almarai font-bold mb-3;
+  @apply text-3xl leading-11 font-almarai font-bold mb-6;
 }
 
 h2 {
@@ -41,6 +41,10 @@ p {
 
 .button-blue {
   @apply bg-josa-blue;
+}
+
+.button-blue-dark {
+  @apply bg-josa-blue-veryDark;
 }
 
 .button-light {

@@ -2,14 +2,14 @@
   <div class="bg-josa-grey">
     <!--JOSA team-->
     <div id="service"
-      class="container py-24 flex justify-between flex-wrap flex-col md:flex-no-wrap md:flex-row-reverse">
-      <div class="px-8 md:pl-0 md:pr-12 md:w-1/2 flex">
-        <img class="bot" src="~/assets/images/group-5.svg" alt="bot" />
+      class="container pt-20 pb-16 flex justify-between flex-wrap flex-col lg:flex-no-wrap lg:flex-row-reverse">
+      <div class="px-8 lg:pl-0 lg:pr-12 lg:w-1/2 flex">
+        <img class="bot lg:mt-6 mb-8 lg:mb-0 mx-auto" src="/bots/all-bots.svg" alt="bot" />
       </div>
-      <div class="mt-12 md:mt-0 md:w-1/2">
+      <div class="lg:w-1/2">
         <h1>{{ team.title }}</h1>
-        <p class="my-12">{{ team.description}}</p>
-        <a href="https://jordanopensource.org" target="_blank" class="button button-light mt-8">{{team.button }}</a>
+        <p>{{ team.description}}</p>
+        <a href="https://jordanopensource.org" target="_blank" class="button button-blue-dark mt-8 px-6">{{ team.button }}</a>
       </div>
     </div>
   </div>
@@ -21,9 +21,8 @@
       return {
         team: {
           title: 'فريق جوسا للأمن الرقمي',
-          description: 'فريق تقني غير ربحي وغير حكومي يتخصّص بالتدخل السريع في مشكلات السلامة الرقمية وتقديم المساعدة التقنية والتصدي للهجمات الإلكترونية، هدفنا هو التوعية حول أهم الممارسات الآمنة للمعلومات ومساعدتك في بناء محيط رقمي آمن، وإذا كنت بصدد التعرض لأي مشكلة فنحن هنا للتدخل الفوري والمساعدة السريعة.',
-          button: 'انقر الى موقنا الرئيسي',
-
+          description: 'فريق تقني يتخصّص بالتدخل السريع في مشكلات السلامة الرقمية وبتقديم المساعدة التقنية والتصّدي للهجمات الإلكترونية، نهدف إلى رفع الوعي بأهم الممارسات الآمنة للمعلومات ومساعدتك في استعمال آمن للإنترنت، وإذا كنت بصدد التعرض لأي مشكلة فنحن هنا لمساعدتك فورًا.',
+          button: 'اطلع على موقعنا الإلكتروني',
         },
       }
     }
