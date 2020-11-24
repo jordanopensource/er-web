@@ -33,11 +33,6 @@
                   </a>
                   <div class="tooltip-text invisible font-lato">{{ emailAddress }}</div>
                 </button>
-                <button ref="chatbutton" class="button-light-disabled button button-light open-zammad-chat tooltip">
-                  <img src="/icons/chat.svg" alt="chat" class="icon">
-                  {{ chat }}
-                  <div class="tooltip-text invisible">{{ chatNotAvailable }}</div>
-                </button>
               </div>
             </div>
           </div>
@@ -61,9 +56,7 @@
         form: 'نموذج  الكتروني',
         email: 'بريد الكتروني',
         emailAddress: 'er@jordanopensource.org',
-        emailLink: "mailto:" + this.emailAddress,
-        chat: 'المحادثة الفورية',
-        chatNotAvailable: 'المحادثة الفورية غير متاحة في الوقت الحالي.',
+        emailLink: "mailto:" + this.emailAddress
       }
     },
     mounted() {
@@ -74,21 +67,6 @@
         modal: true,
         attachmentSupport: true
       });
-      this.$nextTick(() => {
-        this.chatInit();
-      });
-      this.$nextTick(() => {
-        function setIntervalX(callback_1, callback_2, delay, repetitions) {
-          var count = repetitions;
-          var f = setInterval(() => {
-            callback_1(callback_2)
-            if (--count === 0) {
-              clearInterval(f);
-            }
-          }, delay);
-        }
-        setIntervalX(this.setStatus, this.setButton, 300, 5);
-      });
     },
     methods: {
       tooltipShow() {
@@ -97,38 +75,6 @@
         setTimeout(() => {
           info.classList.toggle("invisible")
         }, 4000)
-      },
-      disableButton() {
-        const chatbutton = this.$refs.chatbutton;
-        chatbutton.disabled = true;
-        if (!(chatbutton.classList.contains("button-light-disabled"))) {
-          chatbutton.classList.add("button-light-disabled");
-        }
-        $(".tooltip-text").show();
-        if ($(window).width() <= 640) {
-          $(".info-icon").show();
-        }
-      },
-      enableButton() {
-        const chatbutton = this.$refs.chatbutton;
-        chatbutton.disabled = false;
-        if (chatbutton.classList.contains("button-light-disabled")) {
-          chatbutton.classList.remove("button-light-disabled");
-        }
-        $(".tooltip-text").hide();
-        $(".info-icon").hide();
-      },
-      setStatus(callback) {
-        this.chatState = ($('.zammad-chat').length > 0) ? true : false;
-        callback()
-      },
-      setButton() {
-        const state = this.chatState;
-        if (state == false) {
-          this.disableButton();
-        } else {
-          this.enableButton();
-        }
       },
       copy(event) {
         var button = $(event.target).closest('button');
@@ -142,17 +88,6 @@
             copyTooltip.innerText = ""
           }, 2000)
         })
-      },
-      chatInit() {
-        var chat = new ZammadChat({
-          title: 'Ask JOSA for help',
-          background: '#3897c0',
-          fontSize: '12px',
-          chatId: 1,
-          flat: true,
-          target: window.$(this.$el),
-          show: false
-        });
       },
     }
   }
@@ -176,10 +111,6 @@
     object-fit: contain;
     display: inline;
     margin-left: 15px;
-  }
-
-  .open-zammad-chat {
-    @apply inline-block !important;
   }
 
   .button-email .tooltip-text {

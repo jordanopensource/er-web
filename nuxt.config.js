@@ -32,11 +32,6 @@ export default {
           type: "text/javascript"
         },
         {
-          src: 'https://ots.jordanopensource.org/assets/chat/chat.min.js',
-          body: true,
-          type: "text/javascript"
-        },
-        {
           src: 'https://ots.jordanopensource.org/assets/form/form.js',
           id: 'zammad_form_script',
           body: true,
