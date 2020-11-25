@@ -2,12 +2,10 @@
   <div>
     <!-- Banner -->
     <Banner />
-    <!-- Get Help -->
-    <GetHelp />
-    <!-- Team -->
-    <Team />
     <!-- Trust -->
     <Trust />
+    <!-- Get Help -->
+    <Team />
     <!-- Footer -->
     <Footer />
   </div>
@@ -16,7 +14,6 @@
 <script>
   import Banner from '~/components/Banner';
   import Team from '~/components/Team';
-  import GetHelp from '~/components/GetHelp';
   import Footer from '~/components/Footer';
   import Trust from '~/components/Trust'
 
@@ -25,7 +22,6 @@
     components: {
       Banner,
       Team,
-      GetHelp,
       Footer,
       Trust
     }

@@ -16,10 +16,15 @@ module.exports = {
                 'josa-grey': {
                     default: '#f7f6f5',
                     '500': '#aea79f'
+                },
+                'josa-red': {
+                  default: '#dd4814',
+                  'dark': '#b83b10'
                 }
             },
             fontFamily: {
               'almarai': 'Almarai',
+              'lato': 'lato',
             },
             fontSize: {
                 '175': '1.75rem'
