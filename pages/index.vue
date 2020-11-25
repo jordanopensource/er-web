@@ -1,34 +1,30 @@
 <template>
   <div>
-
     <!-- Banner -->
     <Banner />
-
-    <!-- Services -->
-    <Services />
-
+    <!-- Trust -->
+    <Trust />
     <!-- Get Help -->
-    <GetHelp />
-
+    <Team />
     <!-- Footer -->
     <Footer />
-
   </div>
 </template>
 
 <script>
   import Banner from '~/components/Banner';
-  import Services from '~/components/Services';
-  import GetHelp from '~/components/GetHelp';
+  import Team from '~/components/Team';
   import Footer from '~/components/Footer';
+  import Trust from '~/components/Trust'
 
   export default {
-  layout:"default",
+    layout: "default",
     components: {
       Banner,
-      Services,
-      GetHelp,
-      Footer
+      Team,
+      Footer,
+      Trust
     }
   }
+
 </script>

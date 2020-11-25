@@ -2,259 +2,186 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-    font-family: 'TheMixArab';
-    font-weight: normal;
-    font-weight: 300;
-    src: url('../fonts/TheMixArab/TheMixArab.ttf') format("ttf"),
-        url('../fonts/TheMixArab/TheMixArab.eot') format("eot"),
-        url('../fonts/TheMixArab/TheMixArab.woff') format("woff"),
-        url('../fonts/TheMixArab/TheMixArab.woff2') format("woff2");
-}
-
-@font-face {
-    font-family: 'TheMixArabBold';
-    font-weight: normal;
-    font-weight: 300;
-    src: url('../fonts/TheMixArab/TheMixArab-Bold.ttf') format("ttf"),
-        url('../fonts/TheMixArab/TheMixArab-Bold.eot') format("eot"),
-        url('../fonts/TheMixArab/TheMixArab-Bold.woff') format("woff"),
-        url('../fonts/TheMixArab/TheMixArab-Bold.woff2') format("woff2");
-}
-
-@font-face {
-    font-family: 'FrutigerLTArabic-45Light';
-    font-weight: normal;
-    font-weight: 300;
-    src: url('../fonts/FrutigerLTArabic/FrutigerLTArabic-45Light.ttf') format("ttf"),
-        url('../fonts/FrutigerLTArabic/FrutigerLTArabic-45Light.eot') format("eot"),
-        url('../fonts/FrutigerLTArabic/FrutigerLTArabic-45Light.woff') format("woff");
-}
-
-@font-face {
-    font-family: 'FrutigerLTArabic-65Bold';
-    font-weight: normal;
-    font-weight: 300;
-    src: url('../fonts/FrutigerLTArabic/FrutigerLTArabic-65Bold.ttf') format("ttf"),
-        url('../fonts/FrutigerLTArabic/FrutigerLTArabic-65Bold.eot') format("eot"),
-        url('../fonts/FrutigerLTArabic/FrutigerLTArabic-65Bold.woff') format("woff");
-}
-
-@font-face {
-    font-family: 'FrutigerLTArabic-55Roman';
-    font-weight: normal;
-    font-weight: 300;
-    src: url('../fonts/FrutigerLTArabic/FrutigerLTArabic-55Roman.ttf') format("ttf"),
-        url('../fonts/FrutigerLTArabic/FrutigerLTArabic-55Roman.eot') format("eot"),
-        url('../fonts/FrutigerLTArabic/FrutigerLTArabic-55Roman.woff') format("woff");
-}
-
 h1 {
-    @apply text-3xl leading-11 font-theMixArabBold font-black mb-3;
+  @apply font-almarai text-4xl leading-10 mb-4;
 }
 
 h2 {
-    @apply text-3xl leading-11 text-josa-blue-oxfordBlue font-theMixArab font-black mb-5 mt-3;
-}
-
-h3 {
-    @apply text-175 leading-10 text-josa-blue-oxfordBlue font-theMixArab font-bold;
-}
-
-h4 {
-    @apply text-xl mr-5 font-frutigerLTArabicBold leading-9;
-}
-
-h5 {
-    @apply text-lg text-josa-blue font-bold font-theMixArab;
+  @apply font-almarai text-2xl leading-8 mb-2;
 }
 
 p {
-    @apply leading-8 text-xl text-josa-blue-veryDark font-frutigerLTArabicLight;
+  @apply font-almarai leading-6 text-base;
+}
+
+@screen sm {
+  h1 {
+    @apply text-5xl leading-11 font-almarai mb-6;
+  }
+
+  h2 {
+    @apply text-3xl leading-9 font-almarai mb-2;
+  }
+
+  p {
+    @apply leading-8 text-lg font-almarai;
+  }
 }
 
 .button {
-    @apply inline-block text-white text-base font-bold rounded-md border-2 border-solid border-white px-3 py-3 font-frutigerLTArabicRoman break-words leading-8;
+  @apply inline-block font-bold text-white text-base py-4 font-almarai break-words leading-normal;
+
 }
 
 .button:hover {
-    color: rgba(255, 255, 255, 0.7)
+  opacity: 0.8;
 }
 
 .button-dark {
-    background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.button-blue {
+  @apply bg-josa-blue;
+}
+
+.button-blue-dark {
+  @apply bg-josa-blue-veryDark;
 }
 
 .button-light {
-    @apply bg-josa-blue;
+  @apply bg-transparent text-josa-black border border-solid border-josa-black;
 }
 
-.button-disabled {
-    @apply bg-josa-grey-500 !important;
+.button-light-disabled {
+  @apply text-josa-grey-500 border-josa-grey-500;
 }
 
-.button-disabled:hover {
-    @apply text-white !important;
+.button-red {
+  @apply bg-josa-red;
+}
+
+.button-red-shadow {
+  @apply bg-josa-red;
+  box-shadow: -8px 8px 0 0 #b83b10;
 }
 
 .blue-line::after {
-    margin-top: 5px;
-    content: "";
-    width: 120px;
-    border-bottom: solid 5px theme('colors.josa.blue');
-    display: block;
+  margin-top: 5px;
+  content: "";
+  width: 120px;
+  border-bottom: solid 5px theme('colors.josa.blue');
+  display: block;
 }
 
 .contact-card {
-    border: solid 1px rgba(43, 41, 45, 0.2);
-    border-radius: 6px;
-    width: 100%;
-    margin: 10px 0;
-    padding: 16px 20px;
-    border-radius: 0.375rem;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
+  @apply w-full flex flex-col bg-white p-0 rounded-md;
+}
+
+.contact-card .below {
+  @apply flex flex-col h-full;
+}
+
+.contact-card .description {
+  @apply flex-grow;
+}
+
+.colorabove {
+  @apply h-5 w-full m-0 p-0 rounded-md rounded-b-none mb-0;
 }
 
 .tooltip {
-    @apply relative;
+  @apply relative;
 }
 
 .tooltip-text {
-    @apply p-2 w-full absolute z-10 bg-josa-black text-white text-center rounded-md opacity-75;
-    top: 102%;
-    right: 0;
+  @apply p-2 w-full absolute z-10 bg-josa-black text-white text-center rounded-md opacity-75 right-0 mt-2;
+  top: 100%;
 }
 
 .tooltip:hover .tooltip-text {
-    @apply visible;
+  @apply visible;
 }
 
 .fa-icon {
-    @apply ml-2
+  @apply ml-2;
 }
 
 /* purgecss start ignore */
 /* Zammad form */
 .zammad-form {
-    @apply text-josa-blue-oxfordBlue;
+  @apply text-josa-blue-oxfordBlue;
 }
 
 .zammad-form label {
-    @apply hidden;
+  @apply hidden;
 }
 
 .zammad-form .form-control {
-    @apply text-josa-blue-oxfordBlue border border-solid rounded p-3;
-    border-color: rgba(43, 41, 45, 0.2);
+  @apply text-josa-blue-oxfordBlue border border-solid rounded p-3;
+  border-color: rgba(43, 41, 45, 0.2);
 }
 
 .zammad-form .form-control[type="file"] {
-    @apply border-none px-0;
+  @apply border-none px-0;
 }
 
 .zammad-form button {
-    @apply bg-josa-blue inline-block text-white rounded-md px-6 py-2 font-frutigerLTArabicRoman;
+  @apply bg-josa-blue inline-block text-white rounded-md px-6 py-2 font-almarai;
 }
 
 .zammad-form button:hover {
-    color: rgba(255, 255, 255, 0.7)
+  color: rgba(255, 255, 255, 0.7)
 }
 
 /* Zammad Chat */
 .zammad-chat {
-    text-align: left;
-    font-family: 'lato';
+  text-align: left;
+  font-family: 'Almarai';
 }
 
 .zammad-chat-agent-status::before {
-    margin-right: 0;
-    margin-left: 0.3rem;
+  margin-right: 0;
+  margin-left: 0.3rem;
 }
 
 .zammad-chat-message--agent {
-    text-align: left;
+  text-align: left;
 }
 
 .zammad-chat-agent-name {
-    font-size: 1rem;
+  font-size: 1rem;
 }
 
 .zammad-chat-message-body {
-    @apply font-frutigerLTArabicLight;
+  @apply font-almarai;
 }
 
 .zammad-chat-icon {
-    float: right;
+  float: right;
 }
 
 .zammad-chat-welcome-text {
-    display: inline-block;
-    font-weight: bold;
+  display: inline-block;
+  font-weight: bold;
 }
 
 .zammad-chat-input {
-    @apply font-frutigerLTArabicLight text-right !important;
+  @apply font-almarai text-right !important;
 }
 
 /* purgecss end ignore */
 
-/* sm */
-@screen sm {
-    .contact-card {
-        flex-direction: row;
-    }
-
-    .contact-card button,
-    .contact-card a.button {
-        min-width: 170px;
-    }
+.below,
+.contact-card button,
+.contact-card a.button {
+  min-width: 110px;
 }
 
-/* md */
-@screen md {
+.below {
+  padding: 1rem;
+  margin: 0px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 
-    .button {
-        @apply text-lg px-11;
-    }
-
-    .contact-card button,
-    .contact-card a.button {
-        min-width: 260px;
-    }
-
-    h1 {
-        @apply text-4xl mb-5;
-    }
-
-    h2 {
-        @apply text-4xl;
-    }
-
-    p {
-        @apply text-xl;
-    }
-}
-
-/* lg */
-@screen lg {
-    .fa-icon {
-        @apply ml-4;
-    }
-}
-
-/* xl */
-@screen xl {
-    h1 {
-        @apply text-5xl;
-    }
-
-    h2 {
-        @apply text-5xl;
-    }
-
-    p {
-        @apply text-xl;
-    }
 }

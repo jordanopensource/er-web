@@ -1,4 +1,3 @@
-
 export default {
   /*
   ** Nuxt rendering mode
@@ -15,33 +14,29 @@ export default {
   ** See https://nuxtjs.org/api/configuration-head
   */
   head: {
-    title: process.env.npm_package_name || '',
+    title: 'Emergency Response - Jordan Open Source Association',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
+      { hid: 'description', name: 'description', content: 'Emergency Response - Jordan Open Source Association' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel:"stylesheet", href:"https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap"},
+      { rel: 'stylesheet', href:'https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap' },
     ],
     script:[
-      {
-          src:"https://code.jquery.com/jquery-3.5.1.slim.min.js",
-          integrity: "sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=",
-          crossorigin:"anonymous",
+        {
+          src:"https://code.jquery.com/jquery-2.1.4.min.js",
+          body: true,
           type: "text/javascript"
         },
         {
-          src: 'https://ots.jordanopensource.org/assets/chat/chat.min.js',
+          src: 'https://ots.jordanopensource.org/assets/form/form.js',
+          id: 'zammad_form_script',
           body: true,
           type: "text/javascript"
-          },
-          {
-            src: 'https://ots.jordanopensource.org/assets/form/form.js',
-              id: 'zammad_form_script',
-              body: true,
-              type: "text/javascript"
-            },
+        },
     ]
   },
   /*
@@ -55,6 +50,7 @@ export default {
   ** https://nuxtjs.org/guide/plugins
   */
   plugins: [
+    { src: '~/plugins/copy.js'}
   ],
   /*
   ** Auto import components
@@ -72,25 +68,22 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
-    ['nuxt-fontawesome', {
-    imports: [
-      //import whole set
-      {
-        set: '@fortawesome/free-solid-svg-icons',
-        icons: ['fas']
-      },
-      {
+    ['nuxt-fontawesome',
+    {
+      imports: [
+       {
          set:'@fortawesome/free-brands-svg-icons',
          icons: ['fab']
        }
-    ]
-  }]
+     ]
+    }],
   ],
   /*
   ** Build configuration
   ** See https://nuxtjs.org/api/configuration-build/
   */
   build: {
+    extend (config, ctx) {
+    }
   }
-
 }
