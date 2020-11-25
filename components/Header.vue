@@ -31,14 +31,14 @@
         var button = $(event.target).closest('button');
         var copyTooltip = button.find('.copy-tooltip-text')[0];
         var text = button[0].innerText;
-        this.$copyText(text).then((e) => {
-          copyTooltip.classList.toggle("invisible")
-          copyTooltip.innerText = "Copied!"
-          setTimeout(() => {
-            copyTooltip.classList.toggle("invisible")
-            copyTooltip.innerText = ""
-          }, 2000)
-        })
+        // this.$copyText(text).then((e) => {
+        //   copyTooltip.classList.toggle("invisible")
+        //   copyTooltip.innerText = "Copied!"
+        //   setTimeout(() => {
+        //     copyTooltip.classList.toggle("invisible")
+        //     copyTooltip.innerText = ""
+        //   }, 2000)
+        // })
       },
     }
   }

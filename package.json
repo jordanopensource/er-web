@@ -9,11 +9,10 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
-    "nuxt-fontawesome": "^0.4.0",
     "@fortawesome/free-brands-svg-icons": "^5.12.1",
     "@fortawesome/vue-fontawesome": "^0.1.9",
     "nuxt": "^2.14.0",
-    "nuxt-clipboard2": "^0.2.1"
+    "nuxt-fontawesome": "^0.4.0"
   },
   "devDependencies": {
     "@nuxtjs/tailwindcss": "^2.1.0"

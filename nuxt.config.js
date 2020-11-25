@@ -67,7 +67,6 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
-    'nuxt-clipboard2',
     ['nuxt-fontawesome',
     {
       imports: [
