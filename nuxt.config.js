@@ -37,6 +37,7 @@ export default {
           body: true,
           type: "text/javascript"
         },
+        { src:'/js/matomo.js' },
     ]
   },
   /*
