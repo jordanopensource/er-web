@@ -1,16 +1,23 @@
 FROM node:14.18-alpine3.14
 
-# Create app directory
 WORKDIR /srv/app
-ADD . /srv/app/
+COPY package*.json /tmp/
+RUN cd /tmp && npm install && cp -r node_modules/ /srv/app
+COPY . .
 
-# RUN rm yarn.lock
-RUN npm install
+# Build arguments
+ARG NODE_ENV=development
+ARG HOST=0.0.0.0
+ARG PORT=3000
 
-# Build NuxtJS project
+# Pass build arguments to node environment
+ENV NODE_ENV=${NODE_ENV}
+ENV HOST=${HOST}
+ENV PORT=${PORT}
+
+EXPOSE ${PORT}
+
+# Build Nuxt project
 RUN npm run build
 
-# start command
-CMD [ "npm", "run", "start"]⏎
-
-
+CMD [ "npm", "run", "start" ]
