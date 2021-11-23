@@ -32,7 +32,7 @@ export default {
           type: "text/javascript"
         },
         {
-          src: 'https://ots.jordanopensource.org/assets/form/form.js',
+          src: 'https://ots.josa.ngo/assets/form/form.js',
           id: 'zammad_form_script',
           body: true,
           type: "text/javascript"
@@ -78,7 +78,15 @@ export default {
        }
      ]
     }],
+    'nuxt-healthcheck',
   ],
+  healthcheck: {
+    path: '/healthcheck',
+    contentType: 'application/json',
+    healthy: () => {
+      return JSON.stringify({ result: 'healthy' })
+    }
+  },
   /*
   ** Build configuration
   ** See https://nuxtjs.org/api/configuration-build/

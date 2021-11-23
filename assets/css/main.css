@@ -70,7 +70,7 @@ p {
   margin-top: 5px;
   content: "";
   width: 120px;
-  border-bottom: solid 5px theme('colors.josa.blue');
+  border-bottom: solid 5px theme('colors.josa-blue.DEFAULT');
   display: block;
 }
 
