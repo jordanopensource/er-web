@@ -78,7 +78,15 @@ export default {
        }
      ]
     }],
+    'nuxt-healthcheck',
   ],
+  healthcheck: {
+    path: '/healthcheck',
+    contentType: 'application/json',
+    healthy: () => {
+      return JSON.stringify({ result: 'healthy' })
+    }
+  },
   /*
   ** Build configuration
   ** See https://nuxtjs.org/api/configuration-build/

@@ -11,9 +11,10 @@
   "dependencies": {
     "@fortawesome/free-brands-svg-icons": "^5.15.4",
     "@fortawesome/vue-fontawesome": "^2.0.6",
-    "nuxt": "^2.15.8",
     "@nuxtjs/tailwindcss": "^4.2.1",
-    "nuxt-fontawesome": "^0.4.0"
+    "nuxt": "^2.15.8",
+    "nuxt-fontawesome": "^0.4.0",
+    "nuxt-healthcheck": "^1.0.1"
   },
   "devDependencies": {}
 }
