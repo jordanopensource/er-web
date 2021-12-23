@@ -9,11 +9,13 @@ COPY . .
 ARG NODE_ENV=development
 ARG HOST=0.0.0.0
 ARG PORT=3000
+ARG OTS_FORM_LINK=https://ots.josa.ngo/assets/form/form.js
 
 # Pass build arguments to node environment
 ENV NODE_ENV=${NODE_ENV}
 ENV HOST=${HOST}
 ENV PORT=${PORT}
+ENV OTS_FORM_LINK=${OTS_FORM_LINK}
 
 EXPOSE ${PORT}
 
