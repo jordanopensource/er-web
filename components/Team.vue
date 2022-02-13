@@ -9,7 +9,7 @@
       <div class="lg:w-1/2">
         <h1>{{ team.title }}</h1>
         <p>{{ team.description}}</p>
-        <a href="https://jordanopensource.org" target="_blank" class="button button-blue-dark mt-8 px-6">{{ team.button }}</a>
+        <a href="https://josa.ngo" target="_blank" class="button button-blue-dark mt-8 px-6">{{ team.button }}</a>
       </div>
     </div>
   </div>
