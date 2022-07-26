@@ -43,7 +43,7 @@
             </div>
           </div>
         </div>
-        <img class="bot lg:mt-6 mb-8 lg:mb-0 mx-auto" src="/bots/banner-bot.svg">
+        <img class="bot lg:mt-6 mb-8 lg:mb-0 mx-auto" src="/bots/banner-bot.png">
       </div>
     </div>
   </div>
