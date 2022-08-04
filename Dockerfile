@@ -1,23 +1,51 @@
-FROM node:14.18-alpine3.14
+# set global args
+ARG NODE_ENV=development HOST=0.0.0.0 PORT=3000 USER=node
 
-WORKDIR /srv/app
-COPY package*.json /tmp/
-RUN cd /tmp && npm install && cp -r node_modules/ /srv/app
+###########
+# BUILDER #
+###########
+FROM node:16-alpine3.14 AS builder
+
+# pass the global args
+ARG COMMUNITY_API_URL
+ARG HOST
+ARG PORT
+
+# copy build context and install dependencies
+WORKDIR /workspace
 COPY . .
+RUN npm install
 
-# Build arguments
-ARG NODE_ENV=development
-ARG HOST=0.0.0.0
-ARG PORT=3000
+# inject build args as enviroment variables
+ENV NODE_ENV=${NODE_ENV} HOST=${HOST} PORT=${PORT}
 
-# Pass build arguments to node environment
-ENV NODE_ENV=${NODE_ENV}
-ENV HOST=${HOST}
-ENV PORT=${PORT}
-
-EXPOSE ${PORT}
-
-# Build Nuxt project
+# build NuxtJS project
 RUN npm run build
 
-CMD [ "npm", "run", "start" ]
+###########
+# PROJECT #
+###########
+FROM node:16-slim
+
+# pass the global args
+ARG COMMUNITY_API_URL
+ARG HOST
+ARG PORT
+ARG USER
+
+# copy builder output to project workdir
+WORKDIR /app
+COPY --from=builder --chown=${USER}:${USER} /workspace/.nuxt /app/.nuxt
+COPY --from=builder --chown=${USER}:${USER} /workspace/ /app/
+
+# inject build args as enviroment variables
+ENV COMMUNITY_API_URL=${COMMUNITY_API_URL} HOST=${HOST} PORT=${PORT}
+
+# set user context
+USER ${USER}
+
+# expose port
+EXPOSE ${PORT}
+
+# run for production
+CMD [ "npm", "run", "start"]
