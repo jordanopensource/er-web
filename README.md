@@ -19,7 +19,8 @@
   </p>
 </p>
 
-
+<!-- Build Status -->
+[![Build Status](https://builds.josa.dev/api/badges/jordanopensource/er-web/status.svg)](https://builds.josa.dev/jordanopensource/er-web)
 
 <!-- TABLE OF CONTENTS -->
 <details open="open">
