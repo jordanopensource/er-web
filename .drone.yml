@@ -2,10 +2,7 @@
 
 kind: pipeline
 type: kubernetes
-name: default
-
-metadata:
-  namespace: josa-builds
+name: build er-web
 
 node_selector:
   doks.digitalocean.com/node-pool: josa-cloud-np
