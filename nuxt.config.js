@@ -47,7 +47,6 @@ export default {
         body: true,
         type: "text/javascript",
       },
-      { src: "/js/matomo.js" },
     ],
   },
   /*
@@ -76,6 +75,10 @@ export default {
    */
   modules: [
     [
+      "@zecar/nuxt-matomo",
+      { matomoUrl: "//track.josa.ngo/", siteId: process.env.MATOMO_SITE_ID },
+    ],
+    [
       "nuxt-fontawesome",
       {
         imports: [
@@ -93,6 +96,11 @@ export default {
     contentType: "application/json",
     healthy: () => {
       return JSON.stringify({ result: "healthy" });
+    },
+  },
+  runtimeConfig: {
+    matomo: {
+      siteId: process.env.MATOMO_SITE_ID || 1,
     },
   },
   /*
