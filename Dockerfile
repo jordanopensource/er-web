@@ -18,7 +18,7 @@ COPY . .
 RUN npm install
 
 # inject build args as enviroment variables
-ENV NODE_ENV=${NODE_ENV} HOST=${HOST} PORT=${PORT} MATOMO_SITE_ID=${MATOMO_SITE_ID}
+ENV NODE_ENV=$NODE_ENV HOST=$HOST PORT=$PORT MATOMO_SITE_ID=$MATOMO_SITE_ID
 
 # build NuxtJS project
 RUN npm run build
@@ -41,7 +41,7 @@ COPY --from=builder --chown=${USER}:${USER} /workspace/.nuxt /app/.nuxt
 COPY --from=builder --chown=${USER}:${USER} /workspace/ /app/
 
 # inject build args as enviroment variables
-ENV COMMUNITY_API_URL=${COMMUNITY_API_URL} HOST=${HOST} PORT=${PORT} MATOMO_SITE_ID=${MATOMO_SITE_ID}
+ENV COMMUNITY_API_URL=$COMMUNITY_API_URL HOST=$HOST PORT=$PORT MATOMO_SITE_ID=$MATOMO_SITE_ID
 
 # set user context
 USER ${USER}
