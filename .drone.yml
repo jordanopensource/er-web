@@ -2,10 +2,7 @@
 
 kind: pipeline
 type: kubernetes
-name: default
-
-metadata:
-  namespace: josa-builds
+name: build er-web
 
 node_selector:
   doks.digitalocean.com/node-pool: josa-cloud-np
@@ -15,9 +12,10 @@ steps:
     image: plugins/docker
     settings:
       repo: josaorg/er-web
+      build_args: [MATOMO_SITE_ID=9]
       tags:
         - ${DRONE_COMMIT_SHA}
-        - stable
+        - latest
       username:
         from_secret: docker_username
       password:

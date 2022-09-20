@@ -1,10 +1,5 @@
 export default {
   /*
-   ** Nuxt rendering mode
-   ** See https://nuxtjs.org/api/configuration-mode
-   */
-  mode: "universal",
-  /*
    ** Nuxt target
    ** See https://nuxtjs.org/api/configuration-target
    */
@@ -47,7 +42,6 @@ export default {
         body: true,
         type: "text/javascript",
       },
-      { src: "/js/matomo.js" },
     ],
   },
   /*
@@ -76,6 +70,13 @@ export default {
    */
   modules: [
     [
+      "@zecar/nuxt-matomo",
+      {
+        matomoUrl: "//track.josa.ngo/",
+        siteId: process.env.MATOMO_SITE_ID | 0,
+      },
+    ],
+    [
       "nuxt-fontawesome",
       {
         imports: [
@@ -94,6 +95,12 @@ export default {
     healthy: () => {
       return JSON.stringify({ result: "healthy" });
     },
+  },
+  publicRuntimeConfig: {
+    siteId: process.env.MATOMO_SITE_ID | 0,
+    buildBranch: process.env.DRONE_BRANCH,
+    buildID: process.env.DRONE_BUILD_PARENT,
+    buildCommitSHA: process.env.DRONE_COMMIT_SHA,
   },
   /*
    ** Build configuration
