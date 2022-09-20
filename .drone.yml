@@ -12,10 +12,10 @@ steps:
     image: plugins/docker
     settings:
       repo: josaorg/er-web
-      build_args: [MATOMO_SITE_ID=9]
+      build_args: [MATOMO_SITE_ID=4]
       tags:
         - ${DRONE_COMMIT_SHA}
-        - latest
+        - stable
       username:
         from_secret: docker_username
       password:
