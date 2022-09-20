@@ -71,7 +71,10 @@ export default {
   modules: [
     [
       "@zecar/nuxt-matomo",
-      { matomoUrl: "//track.josa.ngo/", siteId: process.env.MATOMO_SITE_ID | 0 },
+      {
+        matomoUrl: "//track.josa.ngo/",
+        siteId: process.env.MATOMO_SITE_ID | 0,
+      },
     ],
     [
       "nuxt-fontawesome",
@@ -93,10 +96,11 @@ export default {
       return JSON.stringify({ result: "healthy" });
     },
   },
-  runtimeConfig: {
-    matomo: {
-      siteId: process.env.MATOMO_SITE_ID |0 ,
-    },
+  publicRuntimeConfig: {
+    siteId: process.env.MATOMO_SITE_ID | 0,
+    buildBranch: process.env.DRONE_BRANCH,
+    buildID: process.env.DRONE_BUILD_PARENT,
+    buildCommitSHA: process.env.DRONE_COMMIT_SHA,
   },
   /*
    ** Build configuration
