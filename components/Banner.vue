@@ -71,7 +71,7 @@ export default {
       others: "طرق أخرى للتواصل:",
       form: "نموذج  الكتروني",
       email: "بريد الكتروني",
-      emailAddress: "er@jordanopensource.org",
+      emailAddress: "er@josa.ngo",
       whatsapp: "واتساب",
     };
   },
