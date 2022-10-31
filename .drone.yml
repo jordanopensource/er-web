@@ -12,7 +12,11 @@ steps:
     image: plugins/docker
     settings:
       repo: josaorg/er-web
-      build_args: [MATOMO_SITE_ID=9]
+      build_args:
+        [
+          MATOMO_SITE_ID=9,
+          OTS_FORM_LINK=https://ots.josa.ngo/assets/form/form.js,
+        ]
       tags:
         - ${DRONE_COMMIT_SHA}
         - latest
