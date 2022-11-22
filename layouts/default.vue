@@ -1,5 +1,6 @@
 <template>
   <div class="layout" style="direction:rtl">
+    <buildInfoBanner v-if="this.$config.TARGET_ENV==='development'"/>
     <appHeader />
     <Nuxt />
   </div>
