@@ -45,6 +45,13 @@
                     {{ whatsapp }}
                   </a>
                 </button>
+                <Chat
+                  class="button button-light"
+                  :name="chatCard.englishName"
+                  :arabicName="chatCard.arabicName"
+                  :debug="false"
+                  :title="'Ask JOSA for help'"
+                />
               </div>
             </div>
           </div>
@@ -59,7 +66,11 @@
 </template>
 
 <script>
+import Chat from "~/components/Chat";
 export default {
+  components: {
+    Chat,
+  },
   data() {
     return {
       chatState: false,
@@ -73,6 +84,10 @@ export default {
       email: "بريد الكتروني",
       emailAddress: "er@josa.ngo",
       whatsapp: "واتساب",
+      chatCard: {
+        englishName: "chat",
+        arabicName: "المحادثة الفورية",
+      },
     };
   },
   mounted() {

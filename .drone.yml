@@ -16,7 +16,8 @@ steps:
         [
           MATOMO_SITE_ID=9,
           OTS_FORM_LINK=https://ots.josa.ngo/assets/form/form.js,
-          TARGET_ENV=development
+          OTS_CHAT_LINK=https://ots.josa.ngo/assets/chat/chat.min.js,
+          TARGET_ENV=development,
         ]
       build_args_from_env:
         [
