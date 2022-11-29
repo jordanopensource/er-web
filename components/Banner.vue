@@ -49,7 +49,7 @@
                   class="button button-light"
                   :name="chatCard.englishName"
                   :arabicName="chatCard.arabicName"
-                  :debug="true"
+                  :debug="false"
                   :title="'Ask JOSA for help'"
                 />
               </div>
