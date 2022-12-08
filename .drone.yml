@@ -12,7 +12,22 @@ steps:
     image: plugins/docker
     settings:
       repo: josaorg/er-web
-      build_args: [MATOMO_SITE_ID=4]
+      build_args:
+        [
+          MATOMO_SITE_ID=4,
+          OTS_FORM_LINK=https://ots.josa.ngo/assets/form/form.js,
+          OTS_CHAT_LINK=https://ots.josa.ngo/assets/chat/chat.min.js,
+          TARGET_ENV=production,
+        ]
+      build_args_from_env:
+        [
+          DRONE_BUILD_NUMBER,
+          DRONE_BUILD_LINK,
+          DRONE_COMMIT_SHA,
+          DRONE_COMMIT_LINK,
+          DRONE_REPO_LINK,
+          DRONE_BUILD_FINISHED,
+        ]
       tags:
         - ${DRONE_COMMIT_SHA}
         - stable
