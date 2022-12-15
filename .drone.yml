@@ -8,7 +8,7 @@ node_selector:
   doks.digitalocean.com/node-pool: josa-cloud-np
 
 steps:
-  - name: build and release er-web
+  - name: build
     image: plugins/docker
     settings:
       repo: josaorg/er-web
@@ -17,8 +17,8 @@ steps:
           MATOMO_SITE_ID=4,
           OTS_FORM_LINK=https://ots.josa.ngo/assets/form/form.js,
           OTS_CHAT_LINK=https://ots.josa.ngo/assets/chat/chat.min.js,
-          TARGET_ENV=production,
-          ONION_ADDRESS=http://pqkxrgh4cngoearb3fbr5sfpoouapjap3qm7mnhk6oa3dv6expxbreqd.onion,
+          TARGET_ENV=development,
+          ONION_ADDRESS=http://dl6ykotn35yq3hvlb2pvgq22zkl6s72bcfo6hx3bt2fzrdvnuydgbzqd.onion,
         ]
       build_args_from_env:
         [
@@ -37,11 +37,11 @@ steps:
       password:
         from_secret: docker_password
       auto_tag: false
-  - name: notify on Slack
+  - name: notify
     image: plugins/slack
     settings:
       webhook:
         from_secret: slack_webhook
       channel: heartbeat
     depends_on:
-      - build and release er-web
+      - build
